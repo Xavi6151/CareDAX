@@ -7,5 +7,6 @@ namespace CareDAX.Backend
 {
     public class IA
     {
+
     }
 }
