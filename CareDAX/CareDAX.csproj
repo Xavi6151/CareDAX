@@ -68,13 +68,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Frontend\CSS\Estilos.css" />
-    <Content Include="Frontend\HTML\DAXIA.html" />
-    <Content Include="Frontend\HTML\index.html" />
+    <Content Include="Frontend\HTML\DAXIA.aspx" />
+    <Content Include="Frontend\HTML\index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Backend\Daxia\IA.cs" />
     <Compile Include="Backend\Strings\Strings.cs" />
+    <Compile Include="Frontend\HTML\DAXIA.aspx.cs">
+      <DependentUpon>DAXIA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\HTML\DAXIA.aspx.designer.cs">
+      <DependentUpon>DAXIA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\HTML\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\HTML\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
