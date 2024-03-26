@@ -12,7 +12,7 @@ namespace CareDAX.Frontend.HTML
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Descripcion de BECK
+            //Descripcion de Escala de estres percibido-10
             description.Text=StringsEstres.description;
 
             //Columnas de la tabla
@@ -42,7 +42,7 @@ namespace CareDAX.Frontend.HTML
 
         protected void btnReturn_Click(object sender, EventArgs e)
         {
-            //Navegar al aspx "index.aspx"
+            //Navegar al aspx "Principal.aspx"
             Response.Redirect("Principal.aspx");
         }
 

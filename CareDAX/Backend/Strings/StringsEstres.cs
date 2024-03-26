@@ -8,7 +8,7 @@ namespace CareDAX.Backend.Strings
     public class StringsEstres
     {
         //Descripcion
-        public static String description = "Este es el test de BECK. Este test determinará tu nivel de estrés. El test cuenta con un formulario de preguntas y opciones definidas, en las cuales cada opción contará con cierto valor para su clasificación. Lo que debes hacer es seleccionar la opción con la que mejor te identifiques y, al finalizar, dar clic en el botón de 'Calcular'. Te pedimos que seas sincero para que el test tenga una mejor precisión ya que cuando se calculen los datos no podras cambiar ninguna respuesta.";
+        public static String description = "Este es el test de 'Escala de estrés percibido-10'. Este test determinará tu nivel de estrés. El test cuenta con un formulario de preguntas y opciones definidas, en las cuales cada opción contará con cierto valor para su clasificación. Lo que debes hacer es seleccionar la opción con la que mejor te identifiques y, al finalizar, dar clic en el botón de 'Calcular'. Te pedimos que seas sincero para que el test tenga una mejor precisión ya que cuando se calculen los datos no podras cambiar ninguna respuesta.";
 
         //Columnas
         public static String col1="Durante el último mes";
