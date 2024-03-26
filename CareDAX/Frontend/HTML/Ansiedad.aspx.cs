@@ -97,7 +97,6 @@ namespace CareDAX.Frontend.HTML
 
 
 
-
             /*Bloquear la tabla para que no se cambien las respuestas*/
 
             // Iterar a través de las filas de la tabla
