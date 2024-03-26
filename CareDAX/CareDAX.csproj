@@ -64,7 +64,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Frontend\CSS\Estilos_Ansiedad.css" />
+    <Content Include="Frontend\CSS\Estilos_ansiedad.css" />
     <Content Include="Frontend\CSS\Estilos_DAXIA.css" />
     <Content Include="Frontend\CSS\Estilos_depresion.css" />
     <Content Include="Frontend\CSS\Estilos_estres.css" />

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Clasificación de Ansiedad</title>
-    <link rel="stylesheet" href="../CSS/Estilos_Ansiedad.css" type="text/css"/>
+    <link rel="stylesheet" href="../CSS/Estilos_ansiedad.css" type="text/css"/>
 </head>
     
 <body>
