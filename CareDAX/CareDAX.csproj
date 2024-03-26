@@ -67,14 +67,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Frontend\CSS\Estilos.css" />
+    <Content Include="Frontend\CSS\Estilos_DAXIA.css" />
+    <Content Include="Frontend\CSS\Estilos_estres.css" />
+    <Content Include="Frontend\HTML\Ansiedad.aspx" />
     <Content Include="Frontend\HTML\DAXIA.aspx" />
+    <Content Include="Frontend\HTML\Depresion.aspx" />
+    <Content Include="Frontend\HTML\Estres.aspx" />
     <Content Include="Frontend\HTML\index.aspx" />
+    <Content Include="Frontend\HTML\Principal.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Backend\Daxia\IA.cs" />
-    <Compile Include="Backend\Strings\Strings.cs" />
+    <Compile Include="Backend\Strings\StringsDaxia.cs" />
+    <Compile Include="Backend\Strings\StringsEstres.cs" />
+    <Compile Include="Frontend\HTML\Ansiedad.aspx.cs">
+      <DependentUpon>Ansiedad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\HTML\Ansiedad.aspx.designer.cs">
+      <DependentUpon>Ansiedad.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Frontend\HTML\DAXIA.aspx.cs">
       <DependentUpon>DAXIA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -82,12 +95,33 @@
     <Compile Include="Frontend\HTML\DAXIA.aspx.designer.cs">
       <DependentUpon>DAXIA.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Frontend\HTML\Depresion.aspx.cs">
+      <DependentUpon>Depresion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\HTML\Depresion.aspx.designer.cs">
+      <DependentUpon>Depresion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\HTML\Estres.aspx.cs">
+      <DependentUpon>Estres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\HTML\Estres.aspx.designer.cs">
+      <DependentUpon>Estres.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Frontend\HTML\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Frontend\HTML\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\HTML\Principal.aspx.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\HTML\Principal.aspx.designer.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -102,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataBase\" />
+    <Folder Include="Imgs\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

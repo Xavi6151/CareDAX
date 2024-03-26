@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CareDAX.Frontend.HTML.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Depresion.aspx.cs" Inherits="CareDAX.Frontend.HTML.Depresion" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Principal</title>
+    <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
