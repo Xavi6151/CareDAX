@@ -5,21 +5,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Clasificación de Ansiedad</title>
-    <link rel="stylesheet" href="../CSS/Estilos_ansiedad.css" type="text/css"/>
+    <link rel="stylesheet" href="../CSS/Estilos_Ansiedad.css" type="text/css"/>
 </head>
     
 <body>
     <form id="form1" runat="server">
-    <div class="est-container">
-        <div class="est-description">
+    <div class="ans-container">
+        <div class="ans-description">
             <asp:Label Id="description" runat="server" Text="Label"></asp:Label>
         </div>
-        <div class="est-table">
-            <asp:Table Id="table" CssClass="est-table" runat="server"></asp:Table>
+        <div class="ans-table">
+            <asp:Table Id="table" CssClass="ans-table" runat="server"></asp:Table>
         </div>
 
-        <div class="est-table">
-            <asp:Table ID="table1" CssClass="est-table1" runat="server">
+        <div class="ans-table">
+            <asp:Table ID="table1" CssClass="ans-table1" runat="server">
                 <%--Fila 1--%>
                 <asp:TableRow>
                     <asp:TableCell><asp:Label Id="lblCol1" runat="server" Text="Label"></asp:Label></asp:TableCell>
@@ -193,7 +193,7 @@
             </asp:Table>
         </div>
         <%--Botones de regresar y calcular--%>
-        <div class="stress_buttons">
+        <div class="anxiety_buttons">
             <asp:Button Id="btnReturn" CssClass="btn1" runat="server" Text="Button" OnClick="btnReturn_Click" />
             <asp:Button Id="btnCalculate" CssClass="btn1" runat="server" Text="Button" OnClick="btnCalculate_Click" />
         </div>
