@@ -80,6 +80,7 @@
     <Compile Include="Backend\Daxia\IA.cs" />
     <Compile Include="Backend\Strings\StringsAnsiedad.cs" />
     <Compile Include="Backend\Strings\StringsDaxia.cs" />
+    <Compile Include="Backend\Strings\StringsDepresion.cs" />
     <Compile Include="Backend\Strings\StringsEstres.cs" />
     <Compile Include="Frontend\HTML\Ansiedad.aspx.cs">
       <DependentUpon>Ansiedad.aspx</DependentUpon>

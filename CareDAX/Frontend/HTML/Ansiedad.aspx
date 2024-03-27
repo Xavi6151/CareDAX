@@ -19,7 +19,7 @@
         </div>
 
         <div class="ans-table">
-            <asp:Table ID="table1" CssClass="ans-table1" runat="server">
+            <asp:Table Id="table1" CssClass="ans-table1" runat="server">
                 <%--Fila 1--%>
                 <asp:TableRow>
                     <asp:TableCell><asp:Label Id="lblCol1" runat="server" Text="Label"></asp:Label></asp:TableCell>
