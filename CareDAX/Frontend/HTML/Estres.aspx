@@ -13,9 +13,6 @@
             <div class="est-description">
                 <asp:Label Id="description" runat="server" Text="Label"></asp:Label>
             </div>
-            <div class="est-table">
-                <asp:Table Id="table" CssClass="est-table" runat="server"></asp:Table>
-            </div>
 
             <div class="est-table">
                 <asp:Table ID="table1" CssClass="est-table1" runat="server">

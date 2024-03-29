@@ -14,9 +14,6 @@
         <div class="ans-description">
             <asp:Label Id="description" runat="server" Text="Label"></asp:Label>
         </div>
-        <div class="ans-table">
-            <asp:Table Id="table" CssClass="ans-table" runat="server"></asp:Table>
-        </div>
 
         <div class="ans-table">
             <asp:Table Id="table1" CssClass="ans-table1" runat="server">
