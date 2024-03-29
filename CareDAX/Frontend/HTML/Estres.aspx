@@ -135,10 +135,6 @@
                     <asp:Button Id="btnReturn" CssClass="btn1" runat="server" Text="Button" OnClick="btnReturn_Click"/>
                     <asp:Button Id="btnCalculate" CssClass="btn1" runat="server" Text="Button" OnClick="btnCalculate_Click"/>
             </div>
-
-            <div class="result">
-                <asp:Label Id="lblResult" runat="server" Text="Aquí se mostrara el resultado"></asp:Label>
-            </div>
         </div>
     </form>
 </body>

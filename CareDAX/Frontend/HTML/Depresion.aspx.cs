@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CareDAX.Backend.Strings;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,8 @@ namespace CareDAX.Frontend.HTML
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Descripcion
+            description.Text = StringsDepresion.description;
         }
     }
 }

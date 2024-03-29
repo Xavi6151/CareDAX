@@ -53,6 +53,10 @@ namespace CareDAX.Frontend.HTML
             //Variable de puntuacion
 
             int points = 0;
+            
+            //Variable para revisar cuantos radios estan seleccionados
+
+            int radios = 0;
 
             //Revisar puntuación
             for (int i = 1; i <= 50; i++)
@@ -66,6 +70,8 @@ namespace CareDAX.Frontend.HTML
                 //Verifica si el radiobutton esta seleccionado
                 if (rdbActual.Checked)
                 {
+                    //Aumentar en 1 los radios seleccionados
+                    radios++;
                     //Dependiendo el control seleccionado se hara la sumatoria
                     if (radActual.Equals("rdb2") || radActual.Equals("rdb7") || radActual.Equals("rdb12") || radActual.Equals("rdb27") || radActual.Equals("rdb42") || radActual.Equals("rdb47") || radActual.Equals("rdb19") || radActual.Equals("rdb24") || radActual.Equals("rdb34") || radActual.Equals("rdb39")) points++;
                     else if (radActual.Equals("rdb3") || radActual.Equals("rdb8") || radActual.Equals("rdb13") || radActual.Equals("rdb18") || radActual.Equals("rdb23") || radActual.Equals("rdb28") || radActual.Equals("rdb33") || radActual.Equals("rdb38") || radActual.Equals("rdb43") || radActual.Equals("rdb48")) points += 2;
@@ -74,44 +80,23 @@ namespace CareDAX.Frontend.HTML
                 }
             }
 
-            /*Asignar nivel de estres*/
-
-            //Variable que contiene el nivel
-            String level = "";
-            if (points > 25) level = StringsEstres.level3;
-            else if (points >= 20 && points <=25) level = StringsEstres.level2;
-            else if (points < 20) level = StringsEstres.level1;
-
-            /*Mostrar el nivel de estres*/
-            lblResult.Text = level;
-
-            /*Agregar el nivel de estres a la BD (Este estara al final de todo seguramente)*/
-
-
-
-
-
-
-
-            /*Bloquear la tabla para que no se cambien las respuestas*/
-
-            // Iterar a través de las filas de la tabla
-            foreach (TableRow row in table1.Rows)
+            if (radios == 10)
             {
-                // Iterar a través de las celdas de la fila
-                foreach (TableCell cell in row.Cells)
-                {
-                    // Iterar a través de los controles en la celda
-                    foreach (Control control in cell.Controls)
-                    {
-                        // Verificar si el control es un RadioButton
-                        if (control is RadioButton)
-                        {
-                            // Deshabilitar el RadioButton
-                            ((RadioButton)control).Enabled = false;
-                        }
-                    }
-                }
+                /*Asignar nivel de estres*/
+
+                //Variable que contiene el nivel
+                String level = "";
+                if (points > 25) level = StringsEstres.level3;
+                else if (points >= 20 && points <= 25) level = StringsEstres.level2;
+                else if (points < 20) level = StringsEstres.level1;
+
+                //Asignar a la variable de estado del StringEstres el nivel obtenido
+                StringsEstres.estado = level;
+
+                /*Agregar el nivel de estres a la BD (Este estara al final de todo seguramente)*/
+
+                //Navegar al aspx "Principal.aspx"
+                Response.Redirect("Principal.aspx");
             }
         }
     }
