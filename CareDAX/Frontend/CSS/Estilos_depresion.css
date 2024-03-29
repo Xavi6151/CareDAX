@@ -1,2 +1,35 @@
-﻿body {
+﻿.dep-description label {
+    margin-bottom: 30px;
+}
+
+.dep-table {
+    padding-top: 30px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.dep-table1 {
+    padding-top: 30px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.dep-table td {
+    border: 2px solid #000;
+    padding: 8px;
+    text-align: center;
+}
+
+.dep-table tr {
+    outline: 2px solid #000;
+}
+
+.dep_buttons {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.result {
+    padding-top: 30px;
+    text-align: center;
 }

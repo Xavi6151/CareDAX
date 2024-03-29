@@ -8,7 +8,7 @@ namespace CareDAX.Backend.Strings
     public class StringsAnsiedad
     {
         //Descripcion
-        public static String description = "Este es el test de Beck, una herramienta para evaluar tu nivel de estrés. Aunque las preguntas son formuladas por nosotros, la puntuación se basa en tus respuestas seleccionadas. Cada pregunta tiene opciones predefinidas; elige la que mejor refleje tu situación actual. Al finalizar, haz clic en 'Calcular'. Recuerda ser sincero, ya que la precisión de los resultados depende de ello. Una vez completado el test, no podrás modificar tus respuestas.";
+        public static String description = "Este es el test de Beck, una herramienta para evaluar tu nivel de estrés. Aunque las preguntas son formuladas por nosotros, la puntuación se basa en tus respuestas seleccionadas. Cada pregunta tiene opciones predefinidas; elige la que mejor refleje tu situación actual. Al finalizar, haz clic en 'Calcular'. Recuerda ser sincero, ya que la precisión de los resultados depende de ello. Una vez completado el test, no podrás modificar tus respuestas, el resultado se mostrara tu página principal y no se mandara nada si no estan todas las preguntas respondidas.";
 
         //Columnas
         public static String col1 = "Preguntas";
@@ -47,5 +47,8 @@ namespace CareDAX.Backend.Strings
         public static String level1 = "Ansiedad muy baja";
         public static String level2 = "Ansiedad moderada";
         public static String level3 = "Ansiedad severa";
+
+        //Cadena con el nivel del usuario
+        public static String estado;
     }
 }
