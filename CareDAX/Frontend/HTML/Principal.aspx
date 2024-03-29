@@ -13,7 +13,6 @@
             <div class="image_user">
                 <asp:Image Id="Image_User" runat="server" ImageUrl="~/Images/hombre.png"/> <%--Se puede cambiar hombre por mujer--%>
             </div>
-
             <div class="words">
 
                 <div class="est_words">
