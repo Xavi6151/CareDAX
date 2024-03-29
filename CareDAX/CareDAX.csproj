@@ -68,12 +68,15 @@
     <Content Include="Frontend\CSS\Estilos_DAXIA.css" />
     <Content Include="Frontend\CSS\Estilos_depresion.css" />
     <Content Include="Frontend\CSS\Estilos_estres.css" />
+    <Content Include="Frontend\CSS\Estilos_Principal.css" />
     <Content Include="Frontend\HTML\Ansiedad.aspx" />
     <Content Include="Frontend\HTML\DAXIA.aspx" />
     <Content Include="Frontend\HTML\Depresion.aspx" />
     <Content Include="Frontend\HTML\Estres.aspx" />
     <Content Include="Frontend\HTML\index.aspx" />
     <Content Include="Frontend\HTML\Principal.aspx" />
+    <Content Include="Images\hombre.png" />
+    <Content Include="Images\mujer.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +85,7 @@
     <Compile Include="Backend\Strings\StringsDaxia.cs" />
     <Compile Include="Backend\Strings\StringsDepresion.cs" />
     <Compile Include="Backend\Strings\StringsEstres.cs" />
+    <Compile Include="Backend\Strings\StringsPrincipal.cs" />
     <Compile Include="Frontend\HTML\Ansiedad.aspx.cs">
       <DependentUpon>Ansiedad.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -137,7 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataBase\" />
-    <Folder Include="Imgs\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
