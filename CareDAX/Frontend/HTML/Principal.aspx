@@ -14,7 +14,6 @@
                 <asp:Image Id="Image_User" runat="server" ImageUrl="~/Images/hombre.png"/> <%--Se puede cambiar hombre por mujer--%>
             </div>
             <div class="words">
-
                 <div class="est_words">
                     <asp:Label Id="Label1" runat="server" Text="Label"></asp:Label><br/>
                     <asp:Label Id="Label2" runat="server" Text="Label"></asp:Label><br/>
