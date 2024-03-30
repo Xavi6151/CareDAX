@@ -10,11 +10,13 @@ namespace CareDAX.Frontend.HTML
 {
     public partial class DAXIA : System.Web.UI.Page
     {
+
+        protected string InfomessageValue { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             nombre.Text = StringsDaxia.nombreIA;
-            Infomessage.Text = StringsDaxia.Infomessage;
-            request.Text = StringsDaxia.request;
+            InfomessageValue = StringsDaxia.Infomessage;
         }
     }
 }
