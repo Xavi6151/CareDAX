@@ -74,6 +74,7 @@
     <Content Include="Frontend\HTML\Depresion.aspx" />
     <Content Include="Frontend\HTML\Estres.aspx" />
     <Content Include="Frontend\HTML\index.aspx" />
+    <Content Include="Frontend\HTML\Juego.aspx" />
     <Content Include="Frontend\HTML\Principal.aspx" />
     <Content Include="Images\hombre.png" />
     <Content Include="Images\mujer.png" />
@@ -120,6 +121,13 @@
     </Compile>
     <Compile Include="Frontend\HTML\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\HTML\Juego.aspx.cs">
+      <DependentUpon>Juego.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\HTML\Juego.aspx.designer.cs">
+      <DependentUpon>Juego.aspx</DependentUpon>
     </Compile>
     <Compile Include="Frontend\HTML\Principal.aspx.cs">
       <DependentUpon>Principal.aspx</DependentUpon>

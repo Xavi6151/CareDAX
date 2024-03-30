@@ -33,7 +33,7 @@
                 <div class="chat-messages"><p><asp:Label Id="Infomessage" runat="server" TextMode="HtmlDecode"></asp:Label></p></div>
 
                 <!--Caja-->
-                <div><p><asp:Label Id="Label1" runat="server" Text="asdasdasdasd"></asp:Label></p></div>
+                <div class="chat-messages"><p><asp:Label Id="Label1" runat="server" Text="asdasdasdasd"></asp:Label></p></div>
             </div>
         </div>
     </form>
