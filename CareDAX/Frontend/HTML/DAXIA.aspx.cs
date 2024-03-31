@@ -18,5 +18,14 @@ namespace CareDAX.Frontend.HTML
             nombre.Text = StringsDaxia.nombreIA;
             InfomessageValue = StringsDaxia.Infomessage;
         }
+
+        protected void btnEnviar_Click(object sender, EventArgs e)
+        {
+            Infomessage.Text = StringsDaxia.Infomessage;
+            Label1.Text = Input_User.Text;
+            //Agregar la clase al div de label1
+            labelContainer.Attributes["class"] += "chat-messages1";
+            UpdatePanel1.Update();
+        }
     }
 }
