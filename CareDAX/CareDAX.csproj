@@ -76,6 +76,7 @@
     <Content Include="Frontend\HTML\index.aspx" />
     <Content Include="Frontend\HTML\Juego.aspx" />
     <Content Include="Frontend\HTML\Principal.aspx" />
+    <Content Include="Images\enviar.png" />
     <Content Include="Images\hombre.png" />
     <Content Include="Images\mujer.png" />
     <Content Include="Web.config" />
