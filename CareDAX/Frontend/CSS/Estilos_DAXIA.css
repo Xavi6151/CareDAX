@@ -15,22 +15,35 @@
     margin-bottom: 10px;
     display: block;
     width: 70vw;
+    max-width: 70vw;
     box-sizing: border-box;
 }
 
+
 .chat-messages1 {
     color: black;
-    padding: 10px 0;
-    width: 700px;
+    padding: 10px 20px;
     border-radius: 5px;
     border: 2px solid black;
     margin-bottom: 10px;
     display: block;
-    position: absolute;
-    right: 0;
+    width: 70vw;
     left: auto;
     box-sizing: border-box;
-    text-align: left;
+    position: absolute; /* Posiciona el div de manera absoluta */
+    right: 0;
+}
+
+.chat-messages2 {
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    display: block;
+    width: 70vw;
+    box-sizing: border-box;
+    margin-top: 205px;
 }
 
 .text-container {
@@ -51,16 +64,16 @@
 }
 
 .Write-input {
-    width: 100vw;
+    width: 96vw;
     height: 4vh;
     border: 2px solid black;
 }
 
 #btnEnviar {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    bottom: 0;
     right: 0;
-    height: 100%;
+    height: 4.6vh;
     width: 7vh;
     border: 2px solid black;
     background-color: white;

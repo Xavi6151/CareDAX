@@ -4,24 +4,23 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>DAXIA</title>
     <link rel="stylesheet" href="../CSS/Estilos_DAXIA.css"/>
-    <script>
-        var fullText = '<%= InfomessageValue %>';
-        var index = 0;
-        var interval = setInterval(function() {
-            var infomessage = document.getElementById('<%= Infomessage.ClientID %>');
-            if (index < fullText.length) {
-                infomessage.innerHTML += fullText.charAt(index);
-                index++;
-            } else {
-                clearInterval(interval);
-            }
-        }, 10); 
-    </script>
+        <script>
+            var fullText = '<%= InfomessageValue %>';
+    var index = 0;
+    var interval = setInterval(function() {
+        var infomessage = document.getElementById('<%= Infomessage.ClientID %>');
+        if (index < fullText.length) {
+            infomessage.innerHTML += fullText.charAt(index);
+            index++;
+        } else {
+            clearInterval(interval);
+        }
+    }, 10);
+        </script>
 
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-    <script src="../JS/DAXIA.Script.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -38,8 +37,11 @@
                         <!--Mensaje de aclaración-->
                         <div class="chat-messages"><p><asp:Label Id="Infomessage" runat="server" TextMode="HtmlDecode"></asp:Label></p></div>
 
-                        <!--Caja-->
-                        <div id="labelContainer" runat="server"><p><asp:Label Id="Label1" runat="server" Text=""></asp:Label></p></div>
+                        <!--Mensaje 1 del usuario-->
+                        <div id="labelContainer" runat="server"><p><asp:Label Id="Label1" runat="server" TextMode="HtmlDecode"></asp:Label></p></div>
+
+                        <!--Mensaje Recomendaciones-->
+                        <div id="lblRecomendaciones" runat="server"><p><asp:Label Id="Label2" runat="server" TextMode="HtmlDecode"></asp:Label></p></div>
                     </div>
 
                     <!--Parte de escritura para el usuario-->
@@ -50,6 +52,7 @@
                         </div>
                     </div>
                 </div>
+                <asp:Timer Id="Timer1" runat="server" OnTick="Timer1_Tick"></asp:Timer>
             </ContentTemplate>
         </asp:UpdatePanel>
     </form>
