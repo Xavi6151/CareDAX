@@ -53,6 +53,7 @@
                     </div>
                 </div>
                 <asp:Timer Id="Timer1" runat="server" OnTick="Timer1_Tick"></asp:Timer>
+                <asp:Timer Id="Timer2" runat="server" OnTick="Timer2_Tick"></asp:Timer>
             </ContentTemplate>
         </asp:UpdatePanel>
     </form>
