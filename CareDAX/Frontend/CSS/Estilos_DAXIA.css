@@ -48,6 +48,7 @@
 
 .text-container {
     padding: 10px 20px;
+    position: relative;
 }
 
 .User-Writing {
