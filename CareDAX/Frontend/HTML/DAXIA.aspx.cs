@@ -194,6 +194,26 @@ namespace CareDAX.Frontend.HTML
                     {
                         Label2.Text="DAXIA: Con la información que me proporcionaste es posible que tengas alguno o algunos de estos problemas: ";
                         for (int i = 0; i < cantProblemas; i++) Label2.Text+="*" + problemas[i] + " ";
+                        //Recomendaciones
+                        Label2.Text += "Las recomendaciones que te puedo dar estan divididas en 3 partes y estan relacionadas a tus problemas, las que más han ayudado a la gente(+), las que ayudan a la gente pero un poco menos efectivo(/), y las que casi nadie ha utilizado pero eso no significa que no te pueden ayudar(-): ";
+                        //Ciclo para las mas recomendadas pero sacadas de la BD
+                        Label2.Text += "+Recomendacion1 ";
+                        Label2.Text += "+Recomendacion2 ";
+                        Label2.Text += "+Recomendacion3 ";
+                        Label2.Text += "+Recomendacion4 ";
+                        Label2.Text += "+Recomendacion5 ";
+                        //Ciclo para las mas o menos recomendadas pero sacadas de la BD
+                        Label2.Text += "/Recomendacion1 ";
+                        Label2.Text += "/Recomendacion2 ";
+                        Label2.Text += "/Recomendacion3 ";
+                        Label2.Text += "/Recomendacion4 ";
+                        Label2.Text += "/Recomendacion5 ";
+                        //Ciclo para las menos recomendadas pero sacadas de la BD
+                        Label2.Text += "-Recomendacion1 ";
+                        Label2.Text += "-Recomendacion2 ";
+                        Label2.Text += "-Recomendacion3 ";
+                        Label2.Text += "-Recomendacion4 ";
+                        Label2.Text += "-Recomendacion5 ";
                     }
                     Label2.ForeColor = System.Drawing.Color.Black;
                     Input_User.Text = "";
