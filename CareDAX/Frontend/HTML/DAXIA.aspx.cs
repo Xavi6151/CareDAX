@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
@@ -192,29 +193,24 @@ namespace CareDAX.Frontend.HTML
 
                     if (cantProblemas > 0)
                     {
-                        Label2.Text="DAXIA: Con la información que me proporcionaste es posible que tengas alguno o algunos de estos problemas: ";
+                        Label2.Text=StringsDaxia.recomendacionespt1;
                         for (int i = 0; i < cantProblemas; i++) Label2.Text+="*" + problemas[i] + " ";
-                        //Recomendaciones
-                        Label2.Text += "Las recomendaciones que te puedo dar estan divididas en 3 partes y estan relacionadas a tus problemas, las que más han ayudado a la gente(+), las que ayudan a la gente pero un poco menos efectivo(/), y las que casi nadie ha utilizado pero eso no significa que no te pueden ayudar(-): ";
+                        //Recomendaciones 
+                        Label2.Text += StringsDaxia.recomendacionespt2;
                         //Ciclo para las mas recomendadas pero sacadas de la BD
-                        Label2.Text += "+Recomendacion1 ";
-                        Label2.Text += "+Recomendacion2 ";
-                        Label2.Text += "+Recomendacion3 ";
-                        Label2.Text += "+Recomendacion4 ";
-                        Label2.Text += "+Recomendacion5 ";
+
+                        for (int i = 0; i < cantProblemas; i++)
+                        {
+                            Label2.Text += StringsDaxia.recomendacionespt3 + problemas[i] + StringsDaxia.recomendacionespt4;
+                            ConsultaSQL(problemas[i], 0);
+                        }
                         //Ciclo para las mas o menos recomendadas pero sacadas de la BD
-                        Label2.Text += "/Recomendacion1 ";
-                        Label2.Text += "/Recomendacion2 ";
-                        Label2.Text += "/Recomendacion3 ";
-                        Label2.Text += "/Recomendacion4 ";
-                        Label2.Text += "/Recomendacion5 ";
+                        for (int i = 0; i < cantProblemas; i++) ConsultaSQL(problemas[i], 1);
                         //Ciclo para las menos recomendadas pero sacadas de la BD
-                        Label2.Text += "-Recomendacion1 ";
-                        Label2.Text += "-Recomendacion2 ";
-                        Label2.Text += "-Recomendacion3 ";
-                        Label2.Text += "-Recomendacion4 ";
-                        Label2.Text += "-Recomendacion5 ";
+                        for (int i = 0; i < cantProblemas; i++) ConsultaSQL(problemas[i], 2);
+
                     }
+                    //Label2.Text = Session["Usuario"] as string; --Esta es para tomar el nombre de usuario
                     Label2.ForeColor = System.Drawing.Color.Black;
                     Input_User.Text = "";
                     Input_User.BackColor = Color.White;
@@ -235,6 +231,77 @@ namespace CareDAX.Frontend.HTML
 
                     UpdatePanel1.Update();
                     Timer2.Enabled = false;
+                }
+            }
+        }
+
+
+        public void ConsultaSQL(String problema, int recom) //recom se usa para saber si es muy, maso o menos recomendable
+        {
+            string connectionString = "Data Source=localhost;Initial Catalog=CareDAX;Integrated Security=True";
+
+            // Query SQL que quieres ejecutar
+            String query="";
+            if (recom == 0) query = "SELECT * FROM Recomendaciones WHERE Puntaje_Recomendacion >= 60 AND Tipo_Problema LIKE @problema";
+            else if (recom == 1) query = "SELECT * FROM Recomendaciones WHERE Puntaje_Recomendacion >= 30 AND Puntaje_Recomendacion < 60 AND Tipo_Problema LIKE @problema";
+            else if (recom == 2) query = "SELECT * FROM Recomendaciones WHERE Puntaje_Recomendacion < 30 AND Tipo_Problema LIKE @problema";
+
+
+            // Crear una conexión a la base de datos
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Abrir la conexión
+                connection.Open();
+
+                // Crear un comando SQL para ejecutar la consulta
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Agregar el parámetro @problema
+                    command.Parameters.AddWithValue("@problema", problema);
+
+                    // Ejecutar la consulta y obtener un lector de datos
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Iterar a través de las filas y leer los datos
+                        while (reader.Read())
+                        { 
+                            string recomendacion = reader.GetString(1); // La columna 1 corresponde a Recomendacion
+                            
+                            if(recom==0) Label2.Text += " +" + recomendacion + " ";
+                            else if (recom == 1) Label2.Text += " /" + recomendacion + " ";
+                            else if (recom == 2) Label2.Text += " -" + recomendacion + " ";
+                            //Asignar la recomendacion al usuario
+                            AgregarRecomendacion(recomendacion);
+                        }
+                        connection.Close();
+                    }
+                }
+            }
+        }
+
+
+        public void AgregarRecomendacion(string recomendacion)
+        {
+            string connectionString = "Data Source=localhost;Initial Catalog=CareDAX;Integrated Security=True";
+
+            // Query SQL que quieres ejecutar
+            string query = "INSERT INTO Asignaciones_Recomendadas (Usuario, Recomendaciones_Asignadas) VALUES (@usuario, @recomendacion)";
+
+            // Crear una conexión a la base de datos
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Abrir la conexión
+                connection.Open();
+
+                // Crear un comando SQL para ejecutar la consulta
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Agregar el parámetro @usuario
+                    command.Parameters.AddWithValue("@usuario", Session["Usuario"] as string);
+                    command.Parameters.AddWithValue("@recomendacion", recomendacion);
+
+                    // Ejecutar la consulta
+                    command.ExecuteNonQuery();
                 }
             }
         }
