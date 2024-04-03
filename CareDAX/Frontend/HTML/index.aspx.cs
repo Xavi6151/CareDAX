@@ -13,5 +13,23 @@ namespace CareDAX.Frontend.HTML
         {
 
         }
+
+        protected void btnEnviar_Click(object sender, EventArgs e)
+        {
+            //Guardar el usuario para usarlo en cualquier aspx
+
+            Session["Usuario"] = TextBox1.Text;
+            //Navegar al aspx "Principal.aspx"
+            Response.Redirect("Principal.aspx");
+        }
+
+        protected void btnPTS_Click(object sender, EventArgs e)
+        {
+            //Guardar el usuario para usarlo en cualquier aspx
+
+            Session["Usuario"] = TextBox1.Text;
+            //Navegar al aspx "Puntuacion.aspx"
+            Response.Redirect("Puntuacion.aspx");
+        }
     }
 }

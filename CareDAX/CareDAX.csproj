@@ -76,6 +76,7 @@
     <Content Include="Frontend\HTML\index.aspx" />
     <Content Include="Frontend\HTML\Juego.aspx" />
     <Content Include="Frontend\HTML\Principal.aspx" />
+    <Content Include="Frontend\HTML\Puntuacion.aspx" />
     <Content Include="Images\enviar.png" />
     <Content Include="Images\hombre.png" />
     <Content Include="Images\mujer.png" />
@@ -88,6 +89,7 @@
     <Compile Include="Backend\Strings\StringsDepresion.cs" />
     <Compile Include="Backend\Strings\StringsEstres.cs" />
     <Compile Include="Backend\Strings\StringsPrincipal.cs" />
+    <Compile Include="Backend\Strings\StringsPuntuacion.cs" />
     <Compile Include="Frontend\HTML\Ansiedad.aspx.cs">
       <DependentUpon>Ansiedad.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -136,6 +138,13 @@
     </Compile>
     <Compile Include="Frontend\HTML\Principal.aspx.designer.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\HTML\Puntuacion.aspx.cs">
+      <DependentUpon>Puntuacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\HTML\Puntuacion.aspx.designer.cs">
+      <DependentUpon>Puntuacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
