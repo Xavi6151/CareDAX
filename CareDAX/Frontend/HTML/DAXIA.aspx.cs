@@ -32,6 +32,8 @@ namespace CareDAX.Frontend.HTML
                 {
                     nombre.Text = StringsDaxia.nombreIA;
                     InfomessageValue = StringsDaxia.Infomessage;
+                    labelContainer.Visible = false;
+                    lblRecomendaciones.Visible = false;
                 }
                 else
                 {
@@ -47,6 +49,8 @@ namespace CareDAX.Frontend.HTML
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
+            labelContainer.Visible = true;
+            lblRecomendaciones.Visible = true;
             //Desactivar escritura por parte del usuario y clic en boton
             Input_User.ReadOnly = true;
             btnEnviar.Enabled = false;
@@ -71,10 +75,10 @@ namespace CareDAX.Frontend.HTML
                 Infomessage.Text = StringsDaxia.Infomessage;
                 Label1.Text = Input_User.Text;
                 //Agregar la clase al div de label1
-                labelContainer.Attributes["class"] += "chat-messages1";
+                //labelContainer.Attributes["class"] += "chat-messages1";
 
                 UpdatePanel1.Update();
-                lblRecomendaciones.Attributes["class"] += "chat-messages2";
+                //lblRecomendaciones.Attributes["class"] += "chat-messages2";
                 Label2.Text = "NORMALIZANDO...";
                 Label2.ForeColor = System.Drawing.Color.FromArgb(255, 0, 212);
                 //Efecto visual para mostrar en video: normalizar
@@ -118,31 +122,8 @@ namespace CareDAX.Frontend.HTML
                 //Proceso para tokenizar
                 if (iaInstance.tokenizar(Input_User.Text))
                 {
-                    String tokens = "";
-                    //for (int i = 0; i < iaInstance.tokens.Length; i++)
-                    //{
-                    //    if (iaInstance.tokens[i] != null)
-                    //    {
-                    //        tokens += "[" + iaInstance.tokens[i] + "]";
-                    //    }
-                    //}
-                    //Label2.Text = tokens;
-                    //Label2.ForeColor = System.Drawing.Color.Black;
-                    //tkz = 0;
-
                     Thread.Sleep(2000);
-
-                    tokens = "";
                     iaInstance.conversion_Verbos();
-                    //for (int i = 0; i < iaInstance.tokens.Length; i++)
-                    //{
-                    //    if (iaInstance.tokens[i] != null)
-                    //    {
-                    //        tokens += "[" + iaInstance.tokens[i] + "]";
-                    //    }
-                    //}
-                    //Label2.Text = tokens;
-                    //Label2.ForeColor = System.Drawing.Color.Black;
 
                     //HASTA ESTE PUNTO YA SE CONVIRTIERON EN BASE LAS PALABRAS POSIBLES
 
@@ -206,8 +187,8 @@ namespace CareDAX.Frontend.HTML
 
                     if (cantProblemas > 0)
                     {
-                        Label2.Text=StringsDaxia.recomendacionespt1;
-                        for (int i = 0; i < cantProblemas; i++) Label2.Text+="*" + problemas[i] + " ";
+                        Label2.Text = StringsDaxia.recomendacionespt1;
+                        for (int i = 0; i < cantProblemas; i++) Label2.Text += "*" + problemas[i] + " ";
                         //Recomendaciones 
                         Label2.Text += StringsDaxia.recomendacionespt2;
                         //Ciclo para las mas recomendadas pero sacadas de la BD
@@ -223,24 +204,13 @@ namespace CareDAX.Frontend.HTML
                         for (int i = 0; i < cantProblemas; i++) ConsultaSQL(problemas[i], 2);
 
                     }
+                    else Label2.Text = StringsDaxia.recomendacionesFallidas;
                     //Label2.Text = Session["Usuario"] as string; --Esta es para tomar el nombre de usuario
                     Label2.ForeColor = System.Drawing.Color.Black;
                     Input_User.Text = "";
                     Input_User.BackColor = Color.White;
                     Input_User.ReadOnly = false;
                     btnEnviar.Enabled = true;
-
-                    //tokens = "";
-                    //for (int i = 0; i < caracteristicasP.Length; i++)
-                    //{
-                    //    if (caracteristicasP[i] != null)
-                    //    {
-                    //        tokens += "[" + caracteristicasP[i] + "]";
-                    //    }
-                    //}
-                    //Label2.Text = tokens;
-                    //Label2.ForeColor = System.Drawing.Color.Black;
-
 
                     UpdatePanel1.Update();
                     Timer2.Enabled = false;
