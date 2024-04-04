@@ -13,39 +13,50 @@ namespace CareDAX.Frontend.HTML
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Descripcion de BECK
-            description.Text = StringsAnsiedad.description;
+            if (!IsPostBack)
+            {
+                if (Session["usuario"] != null)
+                {
+                    //Descripcion de BECK
+                    description.Text = StringsAnsiedad.description;
 
-            //Columnas de la tabla
-            lblCol1.Text = StringsAnsiedad.col1;
-            lblCol2.Text = StringsAnsiedad.col2;
-            lblCol3.Text = StringsAnsiedad.col3;
-            lblCol4.Text = StringsAnsiedad.col4;
-            lblCol5.Text = StringsAnsiedad.col5;
+                    //Columnas de la tabla
+                    lblCol1.Text = StringsAnsiedad.col1;
+                    lblCol2.Text = StringsAnsiedad.col2;
+                    lblCol3.Text = StringsAnsiedad.col3;
+                    lblCol4.Text = StringsAnsiedad.col4;
+                    lblCol5.Text = StringsAnsiedad.col5;
 
-            //Preguntas
-            lblQues1.Text = StringsAnsiedad.valoresCambiantes[0];
-            lblQues2.Text = StringsAnsiedad.valoresCambiantes[1];
-            lblQues3.Text = StringsAnsiedad.valoresCambiantes[2];
-            lblQues4.Text = StringsAnsiedad.valoresCambiantes[3];
-            lblQues5.Text = StringsAnsiedad.valoresCambiantes[4];
-            lblQues6.Text = StringsAnsiedad.valoresCambiantes[5];
-            lblQues7.Text = StringsAnsiedad.valoresCambiantes[6];
-            lblQues8.Text = StringsAnsiedad.valoresCambiantes[7];
-            lblQues9.Text = StringsAnsiedad.valoresCambiantes[8];
-            lblQues10.Text = StringsAnsiedad.valoresCambiantes[9];
-            lblQues11.Text = StringsAnsiedad.valoresCambiantes[10];
-            lblQues12.Text = StringsAnsiedad.valoresCambiantes[11];
-            lblQues13.Text = StringsAnsiedad.valoresCambiantes[12];
-            lblQues14.Text = StringsAnsiedad.valoresCambiantes[13];
-            lblQues15.Text = StringsAnsiedad.valoresCambiantes[14];
-            lblQues16.Text = StringsAnsiedad.valoresCambiantes[15];
-            lblQues17.Text = StringsAnsiedad.valoresCambiantes[16];
-            lblQues18.Text = StringsAnsiedad.valoresCambiantes[17];
+                    //Preguntas
+                    lblQues1.Text = StringsAnsiedad.valoresCambiantes[0];
+                    lblQues2.Text = StringsAnsiedad.valoresCambiantes[1];
+                    lblQues3.Text = StringsAnsiedad.valoresCambiantes[2];
+                    lblQues4.Text = StringsAnsiedad.valoresCambiantes[3];
+                    lblQues5.Text = StringsAnsiedad.valoresCambiantes[4];
+                    lblQues6.Text = StringsAnsiedad.valoresCambiantes[5];
+                    lblQues7.Text = StringsAnsiedad.valoresCambiantes[6];
+                    lblQues8.Text = StringsAnsiedad.valoresCambiantes[7];
+                    lblQues9.Text = StringsAnsiedad.valoresCambiantes[8];
+                    lblQues10.Text = StringsAnsiedad.valoresCambiantes[9];
+                    lblQues11.Text = StringsAnsiedad.valoresCambiantes[10];
+                    lblQues12.Text = StringsAnsiedad.valoresCambiantes[11];
+                    lblQues13.Text = StringsAnsiedad.valoresCambiantes[12];
+                    lblQues14.Text = StringsAnsiedad.valoresCambiantes[13];
+                    lblQues15.Text = StringsAnsiedad.valoresCambiantes[14];
+                    lblQues16.Text = StringsAnsiedad.valoresCambiantes[15];
+                    lblQues17.Text = StringsAnsiedad.valoresCambiantes[16];
+                    lblQues18.Text = StringsAnsiedad.valoresCambiantes[17];
 
-            //Botones
-            btnReturn.Text = StringsAnsiedad.but_return;
-            btnCalculate.Text = StringsAnsiedad.but_calculate;
+                    //Botones
+                    btnReturn.Text = StringsAnsiedad.but_return;
+                    btnCalculate.Text = StringsAnsiedad.but_calculate;
+                }
+                else
+                {
+                    //Navegar al aspx "index.aspx"
+                    Response.Redirect("index.aspx");
+                }
+            }
         }
         
         protected void btnReturn_Click(object sender, EventArgs e)

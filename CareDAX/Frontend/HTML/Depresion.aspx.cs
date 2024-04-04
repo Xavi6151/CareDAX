@@ -17,121 +17,132 @@ namespace CareDAX.Frontend.HTML
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Descripcion
-            description.Text = StringsDepresion.description;
+            if (!IsPostBack)
+            {
+                if (Session["usuario"] != null)
+                {
+                    //Descripcion
+                    description.Text = StringsDepresion.description;
 
-            //Texto de la columna 1
-            lblCol0.Text = StringsDepresion.questions;
+                    //Texto de la columna 1
+                    lblCol0.Text = StringsDepresion.questions;
 
-            //Preguntas
-            lblquest1.Text = StringsDepresion.valoresCambiantes[0];
-            lblquest2.Text = StringsDepresion.valoresCambiantes[1];
-            lblquest3.Text = StringsDepresion.valoresCambiantes[2];
-            lblquest4.Text = StringsDepresion.valoresCambiantes[3];
-            lblquest5.Text = StringsDepresion.valoresCambiantes[4];
-            lblquest6.Text = StringsDepresion.valoresCambiantes[5];
-            lblquest7.Text = StringsDepresion.valoresCambiantes[6];
-            lblquest8.Text = StringsDepresion.valoresCambiantes[7];
-            lblquest9.Text = StringsDepresion.valoresCambiantes[8];
-            lblquest10.Text = StringsDepresion.valoresCambiantes[9];
-            lblquest11.Text = StringsDepresion.valoresCambiantes[10];
-            lblquest12.Text = StringsDepresion.valoresCambiantes[11];
-            lblquest13.Text = StringsDepresion.valoresCambiantes[12];
-            lblquest14.Text = StringsDepresion.valoresCambiantes[13];
-            lblquest15.Text = StringsDepresion.valoresCambiantes[14];
-            lblquest16.Text = StringsDepresion.valoresCambiantes[15];
-            lblquest17.Text = StringsDepresion.valoresCambiantes[16];
+                    //Preguntas
+                    lblquest1.Text = StringsDepresion.valoresCambiantes[0];
+                    lblquest2.Text = StringsDepresion.valoresCambiantes[1];
+                    lblquest3.Text = StringsDepresion.valoresCambiantes[2];
+                    lblquest4.Text = StringsDepresion.valoresCambiantes[3];
+                    lblquest5.Text = StringsDepresion.valoresCambiantes[4];
+                    lblquest6.Text = StringsDepresion.valoresCambiantes[5];
+                    lblquest7.Text = StringsDepresion.valoresCambiantes[6];
+                    lblquest8.Text = StringsDepresion.valoresCambiantes[7];
+                    lblquest9.Text = StringsDepresion.valoresCambiantes[8];
+                    lblquest10.Text = StringsDepresion.valoresCambiantes[9];
+                    lblquest11.Text = StringsDepresion.valoresCambiantes[10];
+                    lblquest12.Text = StringsDepresion.valoresCambiantes[11];
+                    lblquest13.Text = StringsDepresion.valoresCambiantes[12];
+                    lblquest14.Text = StringsDepresion.valoresCambiantes[13];
+                    lblquest15.Text = StringsDepresion.valoresCambiantes[14];
+                    lblquest16.Text = StringsDepresion.valoresCambiantes[15];
+                    lblquest17.Text = StringsDepresion.valoresCambiantes[16];
 
-            //Opciones
-            rdb1.Text = StringsDepresion.answerrdb1[0];
-            rdb2.Text = StringsDepresion.answerrdb2[0];
-            rdb3.Text = StringsDepresion.answerrdb3[0];
-            rdb4.Text = StringsDepresion.answerrdb4[0];
-            rdb5.Text = StringsDepresion.answerrdb5[0];
+                    //Opciones
+                    rdb1.Text = StringsDepresion.answerrdb1[0];
+                    rdb2.Text = StringsDepresion.answerrdb2[0];
+                    rdb3.Text = StringsDepresion.answerrdb3[0];
+                    rdb4.Text = StringsDepresion.answerrdb4[0];
+                    rdb5.Text = StringsDepresion.answerrdb5[0];
 
-            rdb6.Text = StringsDepresion.answerrdb1[1];
-            rdb7.Text = StringsDepresion.answerrdb2[1];
-            rdb8.Text = StringsDepresion.answerrdb3[1];
-            rdb9.Text = StringsDepresion.answerrdb4[1];
-            rdb10.Text = StringsDepresion.answerrdb5[1];
+                    rdb6.Text = StringsDepresion.answerrdb1[1];
+                    rdb7.Text = StringsDepresion.answerrdb2[1];
+                    rdb8.Text = StringsDepresion.answerrdb3[1];
+                    rdb9.Text = StringsDepresion.answerrdb4[1];
+                    rdb10.Text = StringsDepresion.answerrdb5[1];
 
-            rdb11.Text = StringsDepresion.answerrdb1[2];
-            rdb12.Text = StringsDepresion.answerrdb2[2];
-            rdb13.Text = StringsDepresion.answerrdb3[2];
-            rdb14.Text = StringsDepresion.answerrdb4[2];
-            rdb15.Text = StringsDepresion.answerrdb5[2];
+                    rdb11.Text = StringsDepresion.answerrdb1[2];
+                    rdb12.Text = StringsDepresion.answerrdb2[2];
+                    rdb13.Text = StringsDepresion.answerrdb3[2];
+                    rdb14.Text = StringsDepresion.answerrdb4[2];
+                    rdb15.Text = StringsDepresion.answerrdb5[2];
 
-            rdb16.Text = StringsDepresion.answerrdb1[3];
-            rdb17.Text = StringsDepresion.answerrdb2[3];
-            rdb18.Text = StringsDepresion.answerrdb3[3];
+                    rdb16.Text = StringsDepresion.answerrdb1[3];
+                    rdb17.Text = StringsDepresion.answerrdb2[3];
+                    rdb18.Text = StringsDepresion.answerrdb3[3];
 
-            rdb21.Text = StringsDepresion.answerrdb1[4];
-            rdb22.Text = StringsDepresion.answerrdb2[4];
-            rdb23.Text = StringsDepresion.answerrdb3[4];
+                    rdb21.Text = StringsDepresion.answerrdb1[4];
+                    rdb22.Text = StringsDepresion.answerrdb2[4];
+                    rdb23.Text = StringsDepresion.answerrdb3[4];
 
-            rdb26.Text = StringsDepresion.answerrdb1[5];
-            rdb27.Text = StringsDepresion.answerrdb2[5];
-            rdb28.Text = StringsDepresion.answerrdb3[5];
+                    rdb26.Text = StringsDepresion.answerrdb1[5];
+                    rdb27.Text = StringsDepresion.answerrdb2[5];
+                    rdb28.Text = StringsDepresion.answerrdb3[5];
 
 
-            rdb31.Text = StringsDepresion.answerrdb1[6];
-            rdb32.Text = StringsDepresion.answerrdb2[6];
-            rdb33.Text = StringsDepresion.answerrdb3[6];
-            rdb34.Text = StringsDepresion.answerrdb4[6];
-            rdb35.Text = StringsDepresion.answerrdb5[6];
+                    rdb31.Text = StringsDepresion.answerrdb1[6];
+                    rdb32.Text = StringsDepresion.answerrdb2[6];
+                    rdb33.Text = StringsDepresion.answerrdb3[6];
+                    rdb34.Text = StringsDepresion.answerrdb4[6];
+                    rdb35.Text = StringsDepresion.answerrdb5[6];
 
-            rdb36.Text = StringsDepresion.answerrdb1[7];
-            rdb37.Text = StringsDepresion.answerrdb2[7];
-            rdb38.Text = StringsDepresion.answerrdb3[7];
-            rdb39.Text = StringsDepresion.answerrdb4[7];
-            rdb40.Text = StringsDepresion.answerrdb5[7];
+                    rdb36.Text = StringsDepresion.answerrdb1[7];
+                    rdb37.Text = StringsDepresion.answerrdb2[7];
+                    rdb38.Text = StringsDepresion.answerrdb3[7];
+                    rdb39.Text = StringsDepresion.answerrdb4[7];
+                    rdb40.Text = StringsDepresion.answerrdb5[7];
 
-            rdb41.Text = StringsDepresion.answerrdb1[8];
-            rdb42.Text = StringsDepresion.answerrdb2[8];
-            rdb43.Text = StringsDepresion.answerrdb3[8];
-            rdb44.Text = StringsDepresion.answerrdb4[8];
-            rdb45.Text = StringsDepresion.answerrdb5[8];
+                    rdb41.Text = StringsDepresion.answerrdb1[8];
+                    rdb42.Text = StringsDepresion.answerrdb2[8];
+                    rdb43.Text = StringsDepresion.answerrdb3[8];
+                    rdb44.Text = StringsDepresion.answerrdb4[8];
+                    rdb45.Text = StringsDepresion.answerrdb5[8];
 
-            rdb46.Text = StringsDepresion.answerrdb1[9];
-            rdb47.Text = StringsDepresion.answerrdb2[9];
-            rdb48.Text = StringsDepresion.answerrdb3[9];
-            rdb49.Text = StringsDepresion.answerrdb4[9];
-            rdb50.Text = StringsDepresion.answerrdb5[9];
+                    rdb46.Text = StringsDepresion.answerrdb1[9];
+                    rdb47.Text = StringsDepresion.answerrdb2[9];
+                    rdb48.Text = StringsDepresion.answerrdb3[9];
+                    rdb49.Text = StringsDepresion.answerrdb4[9];
+                    rdb50.Text = StringsDepresion.answerrdb5[9];
 
-            rdb51.Text = StringsDepresion.answerrdb1[10];
-            rdb52.Text = StringsDepresion.answerrdb2[10];
-            rdb53.Text = StringsDepresion.answerrdb3[10];
-            rdb54.Text = StringsDepresion.answerrdb4[10];
-            rdb55.Text = StringsDepresion.answerrdb5[10];
+                    rdb51.Text = StringsDepresion.answerrdb1[10];
+                    rdb52.Text = StringsDepresion.answerrdb2[10];
+                    rdb53.Text = StringsDepresion.answerrdb3[10];
+                    rdb54.Text = StringsDepresion.answerrdb4[10];
+                    rdb55.Text = StringsDepresion.answerrdb5[10];
 
-            rdb56.Text = StringsDepresion.answerrdb1[11];
-            rdb57.Text = StringsDepresion.answerrdb2[11];
-            rdb58.Text = StringsDepresion.answerrdb3[11];
+                    rdb56.Text = StringsDepresion.answerrdb1[11];
+                    rdb57.Text = StringsDepresion.answerrdb2[11];
+                    rdb58.Text = StringsDepresion.answerrdb3[11];
 
-            rdb61.Text = StringsDepresion.answerrdb1[12];
-            rdb62.Text = StringsDepresion.answerrdb2[12];
-            rdb63.Text = StringsDepresion.answerrdb3[12];
+                    rdb61.Text = StringsDepresion.answerrdb1[12];
+                    rdb62.Text = StringsDepresion.answerrdb2[12];
+                    rdb63.Text = StringsDepresion.answerrdb3[12];
 
-            rdb66.Text = StringsDepresion.answerrdb1[13];
-            rdb67.Text = StringsDepresion.answerrdb2[13];
-            rdb68.Text = StringsDepresion.answerrdb3[13];
+                    rdb66.Text = StringsDepresion.answerrdb1[13];
+                    rdb67.Text = StringsDepresion.answerrdb2[13];
+                    rdb68.Text = StringsDepresion.answerrdb3[13];
 
-            rdb71.Text = StringsDepresion.answerrdb1[14];
-            rdb72.Text = StringsDepresion.answerrdb2[14];
-            rdb73.Text = StringsDepresion.answerrdb3[14];
-            rdb74.Text = StringsDepresion.answerrdb4[14];
+                    rdb71.Text = StringsDepresion.answerrdb1[14];
+                    rdb72.Text = StringsDepresion.answerrdb2[14];
+                    rdb73.Text = StringsDepresion.answerrdb3[14];
+                    rdb74.Text = StringsDepresion.answerrdb4[14];
 
-            rdb76.Text = StringsDepresion.answerrdb1[15];
-            rdb77.Text = StringsDepresion.answerrdb2[15];
-            rdb78.Text = StringsDepresion.answerrdb3[15];
+                    rdb76.Text = StringsDepresion.answerrdb1[15];
+                    rdb77.Text = StringsDepresion.answerrdb2[15];
+                    rdb78.Text = StringsDepresion.answerrdb3[15];
 
-            rdb81.Text = StringsDepresion.answerrdb1[16];
-            rdb82.Text = StringsDepresion.answerrdb2[16];
-            rdb83.Text = StringsDepresion.answerrdb3[16];
+                    rdb81.Text = StringsDepresion.answerrdb1[16];
+                    rdb82.Text = StringsDepresion.answerrdb2[16];
+                    rdb83.Text = StringsDepresion.answerrdb3[16];
 
-            //Texto de los botones
-            btnReturn.Text = StringsDepresion.but_return;
-            btnCalculate.Text = StringsDepresion.but_calculate;
+                    //Texto de los botones
+                    btnReturn.Text = StringsDepresion.but_return;
+                    btnCalculate.Text = StringsDepresion.but_calculate;
+                }
+                else
+                {
+                    //Navegar al aspx "index.aspx"
+                    Response.Redirect("index.aspx");
+                }
+            }
         }
 
         protected void btnReturn_Click(object sender, EventArgs e)

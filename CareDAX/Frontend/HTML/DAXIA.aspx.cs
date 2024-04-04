@@ -24,8 +24,21 @@ namespace CareDAX.Frontend.HTML
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            nombre.Text = StringsDaxia.nombreIA;
-            InfomessageValue = StringsDaxia.Infomessage;
+            //Revisar que el usuario tenga acceso
+
+            if (!IsPostBack)
+            {
+                if (Session["usuario"] != null)
+                {
+                    nombre.Text = StringsDaxia.nombreIA;
+                    InfomessageValue = StringsDaxia.Infomessage;
+                }
+                else
+                {
+                    //Navegar al aspx "index.aspx"
+                    Response.Redirect("index.aspx");
+                }
+            }
         }
 
 

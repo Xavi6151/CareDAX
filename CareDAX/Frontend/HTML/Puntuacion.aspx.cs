@@ -13,10 +13,21 @@ namespace CareDAX.Frontend.HTML
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            RadioButton1.Text = StringsPuntuacion.opc1;
-            RadioButton2.Text = StringsPuntuacion.opc2;
-            RadioButton3.Text = StringsPuntuacion.opc3;
-            obtenerRecomendacion();
+            if (!IsPostBack)
+            {
+                if (Session["usuario"] != null)
+                {
+                    RadioButton1.Text = StringsPuntuacion.opc1;
+                    RadioButton2.Text = StringsPuntuacion.opc2;
+                    RadioButton3.Text = StringsPuntuacion.opc3;
+                    obtenerRecomendacion();
+                }
+                else
+                {
+                    //Navegar al aspx "index.aspx"
+                    Response.Redirect("index.aspx");
+                }
+            }
         }
 
         public void obtenerRecomendacion()

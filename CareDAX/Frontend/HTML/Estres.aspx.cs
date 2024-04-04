@@ -13,32 +13,43 @@ namespace CareDAX.Frontend.HTML
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Descripcion de Escala de estres percibido-10
-            description.Text=StringsEstres.description;
+            if (!IsPostBack)
+            {
+                if (Session["usuario"] != null)
+                {
+                    //Descripcion de Escala de estres percibido-10
+                    description.Text = StringsEstres.description;
 
-            //Columnas de la tabla
-            lblCol1.Text = StringsEstres.col1;
-            lblCol2.Text = StringsEstres.col2;
-            lblCol3.Text = StringsEstres.col3;
-            lblCol4.Text = StringsEstres.col4;
-            lblCol5.Text = StringsEstres.col5;
-            lblCol6.Text = StringsEstres.col6;
+                    //Columnas de la tabla
+                    lblCol1.Text = StringsEstres.col1;
+                    lblCol2.Text = StringsEstres.col2;
+                    lblCol3.Text = StringsEstres.col3;
+                    lblCol4.Text = StringsEstres.col4;
+                    lblCol5.Text = StringsEstres.col5;
+                    lblCol6.Text = StringsEstres.col6;
 
-            //Preguntas
-            lblQues1.Text = StringsEstres.valoresCambiantes[0];
-            lblQues2.Text = StringsEstres.valoresCambiantes[1];
-            lblQues3.Text = StringsEstres.valoresCambiantes[2];
-            lblQues4.Text = StringsEstres.valoresCambiantes[3];
-            lblQues5.Text = StringsEstres.valoresCambiantes[4];
-            lblQues6.Text = StringsEstres.valoresCambiantes[5];
-            lblQues7.Text = StringsEstres.valoresCambiantes[6];
-            lblQues8.Text = StringsEstres.valoresCambiantes[7];
-            lblQues9.Text = StringsEstres.valoresCambiantes[8];
-            lblQues10.Text = StringsEstres.valoresCambiantes[9];
+                    //Preguntas
+                    lblQues1.Text = StringsEstres.valoresCambiantes[0];
+                    lblQues2.Text = StringsEstres.valoresCambiantes[1];
+                    lblQues3.Text = StringsEstres.valoresCambiantes[2];
+                    lblQues4.Text = StringsEstres.valoresCambiantes[3];
+                    lblQues5.Text = StringsEstres.valoresCambiantes[4];
+                    lblQues6.Text = StringsEstres.valoresCambiantes[5];
+                    lblQues7.Text = StringsEstres.valoresCambiantes[6];
+                    lblQues8.Text = StringsEstres.valoresCambiantes[7];
+                    lblQues9.Text = StringsEstres.valoresCambiantes[8];
+                    lblQues10.Text = StringsEstres.valoresCambiantes[9];
 
-            //Botones
-            btnReturn.Text = StringsEstres.but_return;
-            btnCalculate.Text = StringsEstres.but_calculate;
+                    //Botones
+                    btnReturn.Text = StringsEstres.but_return;
+                    btnCalculate.Text = StringsEstres.but_calculate;
+                }
+                else
+                {
+                    //Navegar al aspx "index.aspx"
+                    Response.Redirect("index.aspx");
+                }
+            } 
         }
 
         protected void btnReturn_Click(object sender, EventArgs e)
