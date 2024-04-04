@@ -15,5 +15,6 @@ namespace CareDAX.Backend.Strings
         public static String recomendacionespt2 = "Las recomendaciones que te puedo dar estan divididas en 3 partes y estan relacionadas a tus problemas, las que más han ayudado a la gente(+), las que ayudan a la gente pero un poco menos efectivo(/), y las que casi nadie ha utilizado pero eso no significa que no te pueden ayudar(-): ";
         public static String recomendacionespt3 = "Para ";
         public static String recomendacionespt4 = " te recomiendo: ";
+        public static String recomendacionesFallidas = "DAXIA: No logre encontrar ninguna forma de ayudarte, parece que no tienes problemas, felicidades!!";
     }
 }

@@ -38,10 +38,10 @@
                         <div class="chat-messages"><p><asp:Label Id="Infomessage" runat="server" TextMode="HtmlDecode"></asp:Label></p></div>
 
                         <!--Mensaje 1 del usuario-->
-                        <div id="labelContainer" runat="server"><p><asp:Label Id="Label1" runat="server" TextMode="HtmlDecode"></asp:Label></p></div>
+                        <div class="chat-messages1" id="labelContainer" runat="server"><p><asp:Label Id="Label1" runat="server" TextMode="HtmlDecode"></asp:Label></p></div>
 
                         <!--Mensaje Recomendaciones-->
-                        <div id="lblRecomendaciones" runat="server"><p><asp:Label Id="Label2" runat="server" TextMode="HtmlDecode"></asp:Label></p></div>
+                        <div class="chat-messages2" id="lblRecomendaciones" runat="server"><p><asp:Label Id="Label2" runat="server" TextMode="HtmlDecode"></asp:Label></p></div>
                     </div>
 
                     <!--Parte de escritura para el usuario-->
