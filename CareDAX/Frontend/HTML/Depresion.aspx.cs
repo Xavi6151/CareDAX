@@ -1,6 +1,7 @@
 ﻿using CareDAX.Backend.Strings;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -185,11 +186,39 @@ namespace CareDAX.Frontend.HTML
                     StringsDepresion.estado = level;
 
                     /*Agregar el nivel de estres a la BD (Este estara al final de todo seguramente)*/
+                    AgregarDepresion();
+
 
                     //Navegar al aspx "Principal.aspx"
                     Response.Redirect("Principal.aspx");
                 }
+            }
+        }
 
+        public void AgregarDepresion()
+        {
+            string connectionString = "Data Source=localhost;Initial Catalog=CareDAX;Integrated Security=True";
+
+            // Query SQL para insertar el dato de Nivel_Depresion
+            string updateQuery = "UPDATE Usuarios SET Nivel_Depresion = @nuevoNivelDepresion WHERE Usuario = @usuario";
+
+            // Crear una conexión a la base de datos
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Abrir la conexión
+                connection.Open();
+
+                // Crear un comando SQL para ejecutar la consulta de inserción
+                using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
+                {
+                    // Agregar los parámetros @usuario y @nuevoNivelDepresion
+                    updateCommand.Parameters.AddWithValue("@usuario", Session["Usuario"] as String);
+                    updateCommand.Parameters.AddWithValue("@nuevoNivelDepresion", StringsDepresion.estado);
+
+                    // Ejecutar la consulta de actualización
+                    updateCommand.ExecuteNonQuery();
+                }
+                connection.Close();
             }
         }
     }
