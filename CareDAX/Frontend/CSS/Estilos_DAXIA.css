@@ -29,7 +29,7 @@
     display: block;
     width: 70vw;
     box-sizing: border-box;
-    position: relative;
+    margin-left: auto;
 }
 
 .chat-messages2 {
@@ -41,11 +41,11 @@
     display: block;
     width: 70vw;
     box-sizing: border-box;
-    position: absolute;
-    top: calc(100% + 10px);
 }
 
 .text-container {
+    display: flex;
+    flex-direction: column;
     padding-top: 5px;
     position: relative;
 }
