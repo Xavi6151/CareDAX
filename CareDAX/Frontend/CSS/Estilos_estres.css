@@ -1,0 +1,51 @@
+﻿.est-description label {
+    margin-bottom: 30px;
+}
+
+body {
+    background-color: rgb(174, 236, 239);
+    color: rgb(51,51,51);
+}
+
+.stress_buttons .btn1{
+    background-color: rgb(48, 102, 190);
+    color: white;
+}
+
+.est-table {
+    padding-top: 30px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.est-table1 {
+    padding-top: 30px;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #F5F5F5;
+}
+
+
+
+
+
+
+.est-table td {
+    border: 2px solid #000000;
+    padding: 8px;
+    text-align: center;
+}
+
+.est-table tr {
+    outline: 2px solid #000;
+}
+
+.stress_buttons {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.result {
+    padding-top: 30px;
+    text-align: center;
+}
