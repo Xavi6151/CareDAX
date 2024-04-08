@@ -44,7 +44,6 @@
                     <asp:Label Id="Label2" runat="server" Text="Label"></asp:Label><br/>
                     <asp:Label Id="Label3" runat="server" Text="Label"></asp:Label><br/>
                 </div>
-
                 <div class="ans_words">
                     <asp:Label Id="Label4" runat="server" Text="Label"></asp:Label><br/>
                     <asp:Label Id="Label5" runat="server" Text="Label"></asp:Label><br/>
