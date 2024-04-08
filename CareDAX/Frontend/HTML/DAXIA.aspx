@@ -31,7 +31,6 @@
                     <!--Nombre de la IA-->
                     <div class="chat-tab"><asp:Label runat="server" Id="nombre" Text="Label"></asp:Label></div>
 
-
                     <!--Contenedor para la conversacion-->
                     <div class="text-container">
                         <!--Mensaje de aclaración-->
