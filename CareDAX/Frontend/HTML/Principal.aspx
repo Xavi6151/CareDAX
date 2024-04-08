@@ -10,9 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="prin-container">
-            <div class="image_user">
-                <asp:Image Id="Image_User" runat="server" ImageUrl="~/Images/hombre.png"/> <%--Se puede cambiar hombre por mujer--%>
-            </div>
+            
             <div class="words">
                 <div class="est_words">
                     <asp:Label Id="Label1" runat="server" Text="Label"></asp:Label><br/>
