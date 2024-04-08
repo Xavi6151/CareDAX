@@ -193,15 +193,14 @@ namespace CareDAX.Frontend.HTML
                         Label2.Text += StringsDaxia.recomendacionespt2;
                         //Ciclo para las mas recomendadas pero sacadas de la BD
 
-                        for (int i = 0; i < cantProblemas; i++)
+                        for (int i = 0; i < cantProblemas; i++)//POSIBLE PROBLEMA (Pone la de todos los problemas y luego regresa)
                         {
                             Label2.Text += StringsDaxia.recomendacionespt3 + problemas[i] + StringsDaxia.recomendacionespt4;
-                            ConsultaSQL(problemas[i], 0);
+                            ConsultaSQL(problemas[i], 0); //Mas recomendables
+                            ConsultaSQL(problemas[i], 1); //Mas o menos recomendables
+                            ConsultaSQL(problemas[i], 2); //Menos recomendables
                         }
-                        //Ciclo para las mas o menos recomendadas pero sacadas de la BD
-                        for (int i = 0; i < cantProblemas; i++) ConsultaSQL(problemas[i], 1);
-                        //Ciclo para las menos recomendadas pero sacadas de la BD
-                        for (int i = 0; i < cantProblemas; i++) ConsultaSQL(problemas[i], 2);
+                        
 
                     }
                     else Label2.Text = StringsDaxia.recomendacionesFallidas;
