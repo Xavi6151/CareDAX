@@ -195,9 +195,12 @@ namespace CareDAX.Frontend.HTML
 
                         for (int i = 0; i < cantProblemas; i++)//POSIBLE PROBLEMA (Pone la de todos los problemas y luego regresa)
                         {
-                            Label2.Text += StringsDaxia.recomendacionespt3 + problemas[i] + StringsDaxia.recomendacionespt4;
+                            Label2.Text += StringsDaxia.recomendacionespt3 + problemas[i] + StringsDaxia.recomendacionespt4 + "<br>";
+                            //lbl21.InnerHtml += StringsDaxia.recomendacionespt3 + problemas[i] + StringsDaxia.recomendacionespt4 + "<br>"; ;
                             ConsultaSQL(problemas[i], 0); //Mas recomendables
+                            
                             ConsultaSQL(problemas[i], 1); //Mas o menos recomendables
+                            
                             ConsultaSQL(problemas[i], 2); //Menos recomendables
                         }
                         
