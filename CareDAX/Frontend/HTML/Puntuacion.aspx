@@ -14,6 +14,7 @@
             <asp:RadioButton ID="RadioButton2" runat="server" GroupName="selection"/>
             <asp:RadioButton ID="RadioButton3" runat="server" GroupName="selection"/>
             <asp:Button ID="Button1" runat="server" Text="Button" OnClick="btnSiguiente_Click"/>
+            <!--Prueba de funcionalidad ante el choque de codigo-->
         </div>
     </form>
 </body>
