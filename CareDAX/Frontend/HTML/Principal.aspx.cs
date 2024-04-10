@@ -37,9 +37,9 @@ namespace CareDAX.Frontend.HTML
             Label11.Text = StringsPrincipal.level_Dep5;
             Label11.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0);
 
-            Button1.Text= StringsPrincipal.Est;
-            Button2.Text = StringsPrincipal.Ans;
-            Button3.Text = StringsPrincipal.Dep;
+            //Button1.Text= StringsPrincipal.Est;
+            //Button2.Text = StringsPrincipal.Ans;
+            //Button3.Text = StringsPrincipal.Dep;
             Button4.Text = StringsPrincipal.DAXIA;
         }
 

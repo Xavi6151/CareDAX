@@ -81,11 +81,17 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Frontend\CSS\Estilos_ansiedad.css" />
+    <Content Include="Frontend\CSS\Estilos_Ayuda.css" />
     <Content Include="Frontend\CSS\Estilos_DAXIA.css" />
     <Content Include="Frontend\CSS\Estilos_depresion.css" />
     <Content Include="Frontend\CSS\Estilos_estres.css" />
     <Content Include="Frontend\CSS\Estilos_Principal.css" />
+    <Content Include="Frontend\CSS\Estilos_Puntuacion.css" />
+    <Content Include="Frontend\CSS\Estios_index.css" />
+    <Content Include="Frontend\CSS\Estios_Juego.css" />
+    <Content Include="Frontend\CSS\Estios_Registro.css" />
     <Content Include="Frontend\HTML\Ansiedad.aspx" />
+    <Content Include="Frontend\HTML\Ayuda.aspx" />
     <Content Include="Frontend\HTML\DAXIA.aspx" />
     <Content Include="Frontend\HTML\Depresion.aspx" />
     <Content Include="Frontend\HTML\Estres.aspx" />
@@ -93,6 +99,7 @@
     <Content Include="Frontend\HTML\Juego.aspx" />
     <Content Include="Frontend\HTML\Principal.aspx" />
     <Content Include="Frontend\HTML\Puntuacion.aspx" />
+    <Content Include="Frontend\HTML\Registro.aspx" />
     <Content Include="Images\enviar.png" />
     <Content Include="Images\hombre.png" />
     <Content Include="Images\mujer.png" />
@@ -107,17 +114,28 @@
   <ItemGroup>
     <Compile Include="Backend\Daxia\IA.cs" />
     <Compile Include="Backend\Strings\StringsAnsiedad.cs" />
+    <Compile Include="Backend\Strings\StringsAyuda.cs" />
     <Compile Include="Backend\Strings\StringsDaxia.cs" />
     <Compile Include="Backend\Strings\StringsDepresion.cs" />
     <Compile Include="Backend\Strings\StringsEstres.cs" />
+    <Compile Include="Backend\Strings\StringsIndex.cs" />
+    <Compile Include="Backend\Strings\StringsJuego.cs" />
     <Compile Include="Backend\Strings\StringsPrincipal.cs" />
     <Compile Include="Backend\Strings\StringsPuntuacion.cs" />
+    <Compile Include="Backend\Strings\StringsRegistro.cs" />
     <Compile Include="Frontend\HTML\Ansiedad.aspx.cs">
       <DependentUpon>Ansiedad.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Frontend\HTML\Ansiedad.aspx.designer.cs">
       <DependentUpon>Ansiedad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\HTML\Ayuda.aspx.cs">
+      <DependentUpon>Ayuda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\HTML\Ayuda.aspx.designer.cs">
+      <DependentUpon>Ayuda.aspx</DependentUpon>
     </Compile>
     <Compile Include="Frontend\HTML\DAXIA.aspx.cs">
       <DependentUpon>DAXIA.aspx</DependentUpon>
@@ -168,9 +186,22 @@
     <Compile Include="Frontend\HTML\Puntuacion.aspx.designer.cs">
       <DependentUpon>Puntuacion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Frontend\HTML\Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\HTML\Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Content\bootstrap.rtl.min.css.map" />
     <Content Include="Content\bootstrap.rtl.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
@@ -188,12 +219,6 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <None Include="packages.config" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.esm.min.js.map" />
-    <Content Include="Scripts\bootstrap.esm.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -232,7 +257,7 @@
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
   </Target>

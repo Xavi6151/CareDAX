@@ -31,7 +31,7 @@ namespace CareDAX.Frontend.HTML
                 if (Session["usuario"] != null)
                 {
                     nombre.Text = StringsDaxia.nombreIA;
-                    InfomessageValue = StringsDaxia.Infomessage;
+                    InfomessageValue = StringsDaxia.Infomessage + Session["usuario"] as string + StringsDaxia.Infomessage1;
                     labelContainer.Visible = false;
                     lblRecomendaciones.Visible = false;
                 }
@@ -59,7 +59,7 @@ namespace CareDAX.Frontend.HTML
 
             if (clicks != 0)
             {
-                Infomessage.Text = StringsDaxia.Infomessage;
+                Infomessage.Text = StringsDaxia.Infomessage + Session["usuario"] as string + StringsDaxia.Infomessage1; ;
                 Label1.Text = Input_User.Text;
 
                 UpdatePanel1.Update();
@@ -72,7 +72,7 @@ namespace CareDAX.Frontend.HTML
             }
             else
             {
-                Infomessage.Text = StringsDaxia.Infomessage;
+                Infomessage.Text = StringsDaxia.Infomessage + Session["usuario"] as string + StringsDaxia.Infomessage1; ;
                 Label1.Text = Input_User.Text;
                 //Agregar la clase al div de label1
                 //labelContainer.Attributes["class"] += "chat-messages1";
@@ -187,10 +187,11 @@ namespace CareDAX.Frontend.HTML
 
                     if (cantProblemas > 0)
                     {
-                        Label2.Text = StringsDaxia.recomendacionespt1;
-                        for (int i = 0; i < cantProblemas; i++) Label2.Text += "*" + problemas[i] + " ";
+                        Label2.Text = StringsDaxia.recomendacionespt1 + "<br>";
+                        for (int i = 0; i < cantProblemas; i++) Label2.Text += "*" + problemas[i] + "<br>";
+                        Label2.Text += "<br>";
                         //Recomendaciones 
-                        Label2.Text += StringsDaxia.recomendacionespt2;
+                        Label2.Text += StringsDaxia.recomendacionespt2 + "<br>";
                         //Ciclo para las mas recomendadas pero sacadas de la BD
 
                         for (int i = 0; i < cantProblemas; i++)//POSIBLE PROBLEMA (Pone la de todos los problemas y luego regresa)
@@ -247,17 +248,25 @@ namespace CareDAX.Frontend.HTML
                     // Ejecutar la consulta y obtener un lector de datos
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
+                        //Agregar texto de categorizacion de las recomendaciones
+                        if (recom == 0) Label2.Text += "MUY UTILES" + "<br>";
+                        else if (recom == 1) Label2.Text += "UTILES" + "<br>";
+                        else if (recom == 2) Label2.Text += "MEDIO UTILES" + "<br>";
+
+
                         // Iterar a través de las filas y leer los datos
                         while (reader.Read())
                         { 
                             string recomendacion = reader.GetString(1); // La columna 1 corresponde a Recomendacion
-                            
-                            if(recom==0) Label2.Text += " +" + recomendacion + " ";
-                            else if (recom == 1) Label2.Text += " /" + recomendacion + " ";
-                            else if (recom == 2) Label2.Text += " -" + recomendacion + " ";
+                            string Exp_recomendacion = reader.GetString(3);
+
+                            if (recom==0 && !recomendacion.Equals("")) Label2.Text += "*" + recomendacion + ": " + Exp_recomendacion + "<br>";
+                            else if (recom == 1 && !recomendacion.Equals("")) Label2.Text += "*" + recomendacion + ": " + Exp_recomendacion + "<br>";
+                            else if (recom == 2 && !recomendacion.Equals("")) Label2.Text += "*" + recomendacion + ": " + Exp_recomendacion + "<br>";
                             //Asignar la recomendacion al usuario
                             AgregarRecomendacion(recomendacion);
                         }
+                        Label2.Text += "<br>";
                         connection.Close();
                     }
                 }
