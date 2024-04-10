@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <p>Hola, esta es una prueba de commit</p>
+            <p>Hola, esta es una prueba de commit 2</p>
         </div>
     </form>
 </body>
