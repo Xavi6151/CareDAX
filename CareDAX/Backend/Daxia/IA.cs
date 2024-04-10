@@ -21,6 +21,7 @@ namespace CareDAX.Backend
 
         public String[] tokens = new String[10000]; //Acepta 10mil palabras maximo
         public static int palabras = 0;//Las palabras ingresadas
+
         public bool tokenizar(String oracion)
         {
             try //Controlador de excepcion para asegurar que no se pase de 10000 palabras
