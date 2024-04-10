@@ -68,7 +68,7 @@
     <Content Include="Frontend\CSS\Estilos_DAXIA.css" />
     <Content Include="Frontend\CSS\Estilos_depresion.css" />
     <Content Include="Frontend\CSS\Estilos_estres.css" />
-    <Content Include="Frontend\CSS\Estilos_Index.css" />
+    <Content Include="Frontend\CSS\Estilos_index.css" />
     <Content Include="Frontend\CSS\Estilos_Juego.css" />
     <Content Include="Frontend\CSS\Estilos_Principal.css" />
     <Content Include="Frontend\CSS\Estilos_Puntuacion.css" />
