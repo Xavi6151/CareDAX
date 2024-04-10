@@ -68,7 +68,10 @@
     <Content Include="Frontend\CSS\Estilos_DAXIA.css" />
     <Content Include="Frontend\CSS\Estilos_depresion.css" />
     <Content Include="Frontend\CSS\Estilos_estres.css" />
+    <Content Include="Frontend\CSS\Estilos_Index.css" />
+    <Content Include="Frontend\CSS\Estilos_Juego.css" />
     <Content Include="Frontend\CSS\Estilos_Principal.css" />
+    <Content Include="Frontend\CSS\Estilos_Puntuacion.css" />
     <Content Include="Frontend\HTML\Ansiedad.aspx" />
     <Content Include="Frontend\HTML\DAXIA.aspx" />
     <Content Include="Frontend\HTML\Depresion.aspx" />
@@ -88,8 +91,11 @@
     <Compile Include="Backend\Strings\StringsDaxia.cs" />
     <Compile Include="Backend\Strings\StringsDepresion.cs" />
     <Compile Include="Backend\Strings\StringsEstres.cs" />
+    <Compile Include="Backend\Strings\StringsIndex.cs" />
+    <Compile Include="Backend\Strings\StringsJuego.cs" />
     <Compile Include="Backend\Strings\StringsPrincipal.cs" />
     <Compile Include="Backend\Strings\StringsPuntuacion.cs" />
+    <Compile Include="Backend\Strings\StringsRegistro.cs" />
     <Compile Include="Frontend\HTML\Ansiedad.aspx.cs">
       <DependentUpon>Ansiedad.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
