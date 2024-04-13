@@ -1,0 +1,47 @@
+.tarjeta {
+    display: none;
+    position: fixed;
+    top: 120px;
+    right: -60px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(128,222,217); /* Verde claro */
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1; /* Asegurar que la tarjeta esté sobre otros elementos */
+}
+
+    .contenido {
+        text-align: right;
+    }
+
+#mostrarTarjetaBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-editar-perfil {
+    background-color: rgb(128,222,217); /* Fondo transparente */
+    color: #4CAF50; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 0; /* Sin relleno */
+    margin-left: 10px; /* Espacio a la izquierda */
+    cursor: pointer;
+    font-size: inherit; /* Tamaño de fuente igual al del texto circundante */
+}
+
+.custom-btn-primary {
+    background-color: #20c997; /* Turquesa */
+    color: black
+}
+
+.custom-btn-primary:hover {
+    background-color: #17a2b8; /* Cambiar el fondo a un tono más oscuro*/ 
+    color: black; /* Cambiar el color del texto a blanco */
+}

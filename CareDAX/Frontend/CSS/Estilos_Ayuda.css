@@ -2,25 +2,26 @@
 }
 
 .custom-modal {
-    background-color: #d3f8d3; /* Verde claro */
+    background-color: rgb(174,236,239); /* Verde claro */
 }
 
+/*
 .custom-btn-secondary {
-    background-color: #6c757d; /* Gris */
+    background-color: #6c757d; /* Gris 
 }
 
 .custom-btn-primary {
-    background-color: #20c997; /* Turquesa */
+    background-color: #20c997; /* Turquesa 
     color: black
 }
 
-/* Estilos para el hover */
+
 .custom-btn-secondary:hover {
-    background-color: #495057; /* Cambiar el fondo a un tono más oscuro */
-    color: #ffffff; /* Cambiar el color del texto a blanco */
+    background-color: #495057; /* Cambiar el fondo a un tono más oscuro 
+    color: #ffffff; /* Cambiar el color del texto a blanco 
 }
 
 .custom-btn-primary:hover {
-    background-color: #17a2b8; /* Cambiar el fondo a un tono más oscuro */
-    color: black; /* Cambiar el color del texto a blanco */
-}
+    background-color: #17a2b8; /* Cambiar el fondo a un tono más oscuro 
+    color: black; /* Cambiar el color del texto a blanco 
+}*/

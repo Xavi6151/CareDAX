@@ -85,6 +85,7 @@
     <Content Include="Frontend\CSS\Estilos_DAXIA.css" />
     <Content Include="Frontend\CSS\Estilos_depresion.css" />
     <Content Include="Frontend\CSS\Estilos_estres.css" />
+    <Content Include="Frontend\CSS\Estilos_Perfil.css" />
     <Content Include="Frontend\CSS\Estilos_Principal.css" />
     <Content Include="Frontend\CSS\Estilos_Puntuacion.css" />
     <Content Include="Frontend\CSS\Estios_index.css" />
