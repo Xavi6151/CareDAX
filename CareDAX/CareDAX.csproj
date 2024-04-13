@@ -91,7 +91,6 @@
     <Content Include="Frontend\CSS\Estios_Juego.css" />
     <Content Include="Frontend\CSS\Estios_Registro.css" />
     <Content Include="Frontend\HTML\Ansiedad.aspx" />
-    <Content Include="Frontend\HTML\Ayuda.aspx" />
     <Content Include="Frontend\HTML\DAXIA.aspx" />
     <Content Include="Frontend\HTML\Depresion.aspx" />
     <Content Include="Frontend\HTML\Estres.aspx" />
@@ -129,13 +128,6 @@
     </Compile>
     <Compile Include="Frontend\HTML\Ansiedad.aspx.designer.cs">
       <DependentUpon>Ansiedad.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Frontend\HTML\Ayuda.aspx.cs">
-      <DependentUpon>Ayuda.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Frontend\HTML\Ayuda.aspx.designer.cs">
-      <DependentUpon>Ayuda.aspx</DependentUpon>
     </Compile>
     <Compile Include="Frontend\HTML\DAXIA.aspx.cs">
       <DependentUpon>DAXIA.aspx</DependentUpon>
