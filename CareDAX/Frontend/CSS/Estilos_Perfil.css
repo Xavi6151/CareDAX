@@ -4,19 +4,19 @@
     top: 120px;
     right: -60px;
     transform: translate(-50%, -50%);
-    background-color: rgb(128,222,217); /* Verde claro */
-    color: black;
+    /*background-color: rgb(128,222,217); /* Verde claro */
+    /*color: black;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     z-index: 1; /* Asegurar que la tarjeta esté sobre otros elementos */
 }
 
-    .contenido {
+   /* .contenido {
         text-align: right;
-    }
+    }*/
 
-#mostrarTarjetaBtn {
+/*#mostrarTarjetaBtn {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -24,24 +24,111 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
+}*/
+/*
 .btn-editar-perfil {
     background-color: rgb(128,222,217); /* Fondo transparente */
-    color: #4CAF50; /* Color del texto */
-    border: none; /* Sin borde */
-    padding: 0; /* Sin relleno */
-    margin-left: 10px; /* Espacio a la izquierda */
-    cursor: pointer;
+    /*color: #4CAF50; /* Color del texto */
+    /*border: none; /* Sin borde */
+    /*padding: 0; /* Sin relleno */
+    /*margin-left: 10px; /* Espacio a la izquierda */
+    /*/cursor: pointer;
     font-size: inherit; /* Tamaño de fuente igual al del texto circundante */
-}
+/*}*/
 
-.custom-btn-primary {
+/*.custom-btn-primary {
     background-color: #20c997; /* Turquesa */
-    color: black
+  /*  color: black
+}*/
+
+/*.custom-btn-primary:hover {
+    background-color: #17a2b8; /* Cambiar el fondo a un tono más oscuro*/ 
+    /*color: black; /* Cambiar el color del texto a blanco */
+/*}*/
+
+
+/*Perfil chido*/
+.card {
+    --main-color: #fff;
+    --submain-color: #ccc;
+    --bg-color: #000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    width: 300px;
+    height: 384px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background: var(--bg-color);
 }
 
-.custom-btn-primary:hover {
-    background-color: #17a2b8; /* Cambiar el fondo a un tono más oscuro*/ 
-    color: black; /* Cambiar el color del texto a blanco */
+.card__img {
+    height: 192px;
+    width: 100%;
+}
+
+    .card__img svg {
+        height: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+.card__avatar {
+    position: absolute;
+    width: 114px;
+    height: 114px;
+    background: var(--bg-color);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% - 57px);
+}
+
+    .card__avatar svg {
+        width: 100px;
+        height: 100px;
+    }
+
+.card__title {
+    margin-top: 60px;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--main-color);
+}
+
+.card__subtitle {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--submain-color);
+}
+
+.card__btn {
+    margin-top: 15px;
+    width: 76px;
+    height: 31px;
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11px;
+    color: var(--main-color);
+    background: var(--bg-color);
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.card__btn-solid {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+.card__btn:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+.card__btn-solid:hover {
+    background: var(--bg-color);
+    color: var(--main-color);
 }

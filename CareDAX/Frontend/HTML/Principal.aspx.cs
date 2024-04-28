@@ -1,6 +1,7 @@
 ﻿using CareDAX.Backend.Strings;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -37,10 +38,17 @@ namespace CareDAX.Frontend.HTML
             Label11.Text = StringsPrincipal.level_Dep5;
             Label11.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0);
 
+            UsuarioPerfil.Text = Session["usuario"] as String;
+            Usuario.Text = Session["usuario"] as String;
+
+            AsignarCategoria("ansiedad");
+            AsignarCategoria("estres");
+            AsignarCategoria("depresion");
+            
             //Button1.Text= StringsPrincipal.Est;
             //Button2.Text = StringsPrincipal.Ans;
             //Button3.Text = StringsPrincipal.Dep;
-            Button4.Text = StringsPrincipal.DAXIA;
+            //Button4.Text = StringsPrincipal.DAXIA;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -66,5 +74,74 @@ namespace CareDAX.Frontend.HTML
             //Navegar al aspx "DAXIA.aspx"
             Response.Redirect("DAXIA.aspx");
         }
+
+        protected void ButtonRec_Click(object sender, EventArgs e)
+        {
+            //Navegar al aspx "DAXIA.aspx"
+            Response.Redirect("DAXIA.aspx");
+        }
+
+
+        public void AsignarCategoria(string categoria)
+        {
+            string connectionString = "Data Source=localhost;Initial Catalog=CareDAX;Integrated Security=True";
+
+            // Query SQL que quieres ejecutar
+            String query = "";
+            /*if (categoria.Equals("ansiedad")) query = "SELECT Nivel_Ansiedad FROM Usuarios WHERE Usuario=@usuario";
+            else if (categoria.Equals("estres")) query = "SELECT Nivel_Estres FROM Usuarios WHERE Usuario=@usuario";
+            else if (categoria.Equals("depresion")) query = "SELECT Nivel_Depresion FROM Usuarios WHERE Usuario=@usuario";*/
+
+            if (categoria.Equals("ansiedad")) query = "SELECT * FROM Usuarios WHERE Usuario=@usuario";
+            else if (categoria.Equals("estres")) query = "SELECT * FROM Usuarios WHERE Usuario=@usuario";
+            else if (categoria.Equals("depresion")) query = "SELECT * FROM Usuarios WHERE Usuario=@usuario";
+
+            // Crear una conexión a la base de datos
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Abrir la conexión
+                connection.Open();
+
+                // Crear un comando SQL para ejecutar la consulta
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Agregar el parámetro @usuario
+                    command.Parameters.AddWithValue("@usuario", Session["usuario"] as String);
+
+                    // Ejecutar la consulta y obtener un lector de datos
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                       
+                        // Iterar a través de las filas y leer los datos
+                        while (reader.Read())
+                        {
+                            
+                            string cate;
+
+                            if (categoria.Equals("ansiedad"))
+                            {
+                                cate = reader.GetString(3);
+                                CategoriaAnsiedad.Text = cate;
+                             }
+                            else if (categoria.Equals("estres"))
+                            {
+                                cate = reader.GetString(4);
+                                CategoriaEstres.Text = cate;
+
+                            }
+                            else if (categoria.Equals("depresion"))
+                            {
+                                cate = reader.GetString(5);
+                                CategoriaDepresion.Text = cate;
+                            }
+                            
+                        }
+                        
+                        connection.Close();
+                    }
+                }
+            }
+        }
+
     }
 }
