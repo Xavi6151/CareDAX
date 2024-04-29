@@ -13,30 +13,30 @@ namespace CareDAX.Frontend.HTML
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = StringsPrincipal.level_Est1;
-            Label1.ForeColor = System.Drawing.Color.FromArgb(25, 153, 0); //Esto pone color de letra
-            Label2.Text = StringsPrincipal.level_Est2;
-            Label2.ForeColor = System.Drawing.Color.FromArgb(165, 118, 0);
-            Label3.Text = StringsPrincipal.level_Est3;
-            Label3.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0);
+            //Label1.Text = StringsPrincipal.level_Est1;
+            //Label1.ForeColor = System.Drawing.Color.FromArgb(25, 153, 0); //Esto pone color de letra
+            //Label2.Text = StringsPrincipal.level_Est2;
+            //Label2.ForeColor = System.Drawing.Color.FromArgb(165, 118, 0);
+            //Label3.Text = StringsPrincipal.level_Est3;
+            //Label3.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0);
 
-            Label4.Text = StringsPrincipal.level_Ans1;
-            Label4.ForeColor = System.Drawing.Color.FromArgb(25, 153, 0);
-            Label5.Text = StringsPrincipal.level_Ans2;
-            Label5.ForeColor = System.Drawing.Color.FromArgb(165, 118, 0);
-            Label6.Text = StringsPrincipal.level_Ans3;
-            Label6.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0);
+            //Label4.Text = StringsPrincipal.level_Ans1;
+            //Label4.ForeColor = System.Drawing.Color.FromArgb(25, 153, 0);
+            //Label5.Text = StringsPrincipal.level_Ans2;
+            //Label5.ForeColor = System.Drawing.Color.FromArgb(165, 118, 0);
+            //Label6.Text = StringsPrincipal.level_Ans3;
+            //Label6.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0);
 
-            Label7.Text = StringsPrincipal.level_Dep1;
-            Label7.ForeColor = System.Drawing.Color.FromArgb(25, 153, 0); 
-            Label8.Text = StringsPrincipal.level_Dep2;
-            Label8.ForeColor = System.Drawing.Color.FromArgb(114, 240, 158);
-            Label9.Text = StringsPrincipal.level_Dep3;
-            Label9.ForeColor = System.Drawing.Color.FromArgb(165, 118, 0);
-            Label10.Text = StringsPrincipal.level_Dep4;
-            Label10.ForeColor = System.Drawing.Color.FromArgb(210, 111, 0);
-            Label11.Text = StringsPrincipal.level_Dep5;
-            Label11.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0);
+            //Label7.Text = StringsPrincipal.level_Dep1;
+            //Label7.ForeColor = System.Drawing.Color.FromArgb(25, 153, 0); 
+            //Label8.Text = StringsPrincipal.level_Dep2;
+            //Label8.ForeColor = System.Drawing.Color.FromArgb(114, 240, 158);
+            //Label9.Text = StringsPrincipal.level_Dep3;
+            //Label9.ForeColor = System.Drawing.Color.FromArgb(165, 118, 0);
+            //Label10.Text = StringsPrincipal.level_Dep4;
+            //Label10.ForeColor = System.Drawing.Color.FromArgb(210, 111, 0);
+            //Label11.Text = StringsPrincipal.level_Dep5;
+            //Label11.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0);
 
             UsuarioPerfil.Text = Session["usuario"] as String;
             Usuario.Text = Session["usuario"] as String;

@@ -1,7 +1,7 @@
 ﻿form {
     background-color: rgb(174,236,239);
-    font-family: /*'Lucida Sans Typewriter' Courier New'*/ 'Imprint MT Shadow'/*Bahnschrift*/;
-    font-size:17px ;
+    font-family: /*'Lucida Sans Typewriter' Courier New'*/ 'Imprint MT Shadow' /*Bahnschrift*/;
+    font-size: 17px;
 }
 
 .image_user {
@@ -53,6 +53,7 @@
     margin-left: 10px;
     cursor: pointer;
 }
+
 .offcanvas-body {
     padding: 10px;
 }
@@ -64,14 +65,14 @@
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-    .dropdown-menu a.dropdown-item {
-        color: #212529;
-    }
+.dropdown-menu a.dropdown-item {
+    color: #212529;
+}
 
-        .dropdown-menu a.dropdown-item:hover {
-            background-color: #f8f9fa;
-            color: #007bff;
-        }
+.dropdown-menu a.dropdown-item:hover {
+        background-color: #f8f9fa;
+        color: #007bff;
+}
 
 .offcanvas-title {
     color: #007bff;
@@ -88,13 +89,6 @@
     .navbar .dropdown {
         margin-right: 20px;
     }
-
-@media (max-width: 991.98px) {
-    .navbar .navbar-brand {
-        margin-right: auto;
-        margin-left: 0;
-    }
-}
 
 /*estilos botón chat*/
 
@@ -159,5 +153,5 @@
     background-color: transparent;
     background-image: url('../../Images/Mensaje.png');
     background-size: auto 90%;
-    background-position:center;
+    background-position: center;
 }

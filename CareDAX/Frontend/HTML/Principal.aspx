@@ -70,37 +70,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="prin-container">
-            <div class="words">
-                <div class="est_words">
-                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label><br />
-                    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label><br />
-                    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label><br />
-                </div>
-                <div class="ans_words">
-                    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label><br />
-                    <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label><br />
-                    <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label><br />
-                </div>
-
-                <div class="dep_words">
-                    <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label><br />
-                    <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label><br />
-                    <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label><br />
-                    <asp:Label ID="Label10" runat="server" Text="Label"></asp:Label><br />
-                    <asp:Label ID="Label11" runat="server" Text="Label"></asp:Label><br />
-                </div>
-            </div>
-            <div class="IA">
-                <button class="chatBtn">
-                    <span class="tooltip">Hablar con DAXIA</span>
-                    <asp:Button ID="ButtonRec" runat="server" OnClick="ButtonRec_Click" />
-                </button>
-            </div>
-        </div>
-
-
         <!-- Perfil 
         <div id="tarjetaFlotante" class="tarjeta">
             <div class="contenido">
@@ -128,7 +97,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card border-2 row justify-content-center m-5" style="width: 19rem;">
-                        <img src="../../Images/estres.jpeg" class="card-img-top p-2" alt="">
+                        <img src="../../Images/estres.jpeg" class="card-img-top p-2" alt=""/>
                         <div class="card-body">
                             <h5 class="card-title">Estrés</h5>
                             <asp:Label ID="CategoriaEstres" runat="server" Text=""></asp:Label>
@@ -137,7 +106,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card border-2 row justify-content-center p-2 m-5 " style="width: 19rem;">
-                        <img src="../../Images/ansiedad.jpeg" class="card-img-top p-2" alt="">
+                        <img src="../../Images/ansiedad.jpeg" class="card-img-top p-2" alt=""/>
                         <div class="card-body">
                             <h5 class="card-title">Ansiedad</h5>
                             <asp:Label ID="CategoriaAnsiedad" runat="server" Text=""></asp:Label>
@@ -146,7 +115,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card border-2 row justify-content-center p-2 m-5 " style="width: 19rem;">
-                        <img src="../../Images/depresion.jpeg" class="card-img-top p-2" alt="">
+                        <img src="../../Images/depresion.jpeg" class="card-img-top p-2" alt=""/>
                         <div class="card-body">
                             <h5 class="card-title">Depresión</h5>
                             <asp:Label ID="CategoriaDepresion" runat="server" Text=""></asp:Label>
@@ -155,6 +124,15 @@
                 </div>
             </div>
         </div>
+
+        <div class="prin-container">
+    <div class="IA">
+        <button class="chatBtn">
+            <span class="tooltip">Hablar con DAXIA</span>
+            <asp:Button ID="ButtonRec" runat="server" OnClick="ButtonRec_Click" />
+        </button>
+    </div>
+</div>
     </form>
 </body>
 <script>
