@@ -25,11 +25,11 @@
                 <asp:TableRow CssClass="rdb-align">
                     <asp:TableCell><asp:Label Id="lblquest1" runat="server" Text="Label"></asp:Label></asp:TableCell>
                     <asp:TableCell>
-                        <asp:RadioButton Id="rdb1" runat="server" GroupName="Group1"/><br/>
-                        <asp:RadioButton Id="rdb2" runat="server" GroupName="Group1"/><br/>
-                        <asp:RadioButton Id="rdb3" runat="server" GroupName="Group1"/><br/>
-                        <asp:RadioButton Id="rdb4" runat="server" GroupName="Group1"/><br/>
-                        <asp:RadioButton Id="rdb5" runat="server" GroupName="Group1"/><br/>
+                            <asp:RadioButton Id="rdb1" runat="server" GroupName="Group1"/><br/>
+                            <asp:RadioButton Id="rdb2" runat="server" GroupName="Group1"/><br/>
+                            <asp:RadioButton Id="rdb3" runat="server" GroupName="Group1"/><br/>
+                            <asp:RadioButton Id="rdb4" runat="server" GroupName="Group1"/><br/>
+                            <asp:RadioButton Id="rdb5" runat="server" GroupName="Group1"/><br/>
                     </asp:TableCell>
                 </asp:TableRow>
 

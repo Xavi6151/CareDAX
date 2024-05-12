@@ -1,4 +1,55 @@
-﻿.dep-description label {
+﻿body {
+    width: 99%;
+    height: 100%;
+    background: linear-gradient( 45deg, #3498db, #2ecc71 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    overflow: auto;
+}
+
+* {
+    color: white;
+}
+
+.btn1 {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(82.3deg, #4caf50, #87ceeb); /* Nuevo fondo verde con azul claro */
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 30px; /* Aumentar el espacio horizontal entre botones */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(27, 133, 219, 0.5) 5px 10px 15px;
+}
+
+.btn1:last-child {
+    margin-right: 0; /* Eliminar margen derecho para el último botón */
+}
+
+.btn1:hover::before {
+   transform: scaleX(1);
+}
+
+.btn1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(82.3deg, rgba(150, 93, 233, 1), rgba(99, 88, 238, 1));
+    transition: all 0.475s;
+}
+
+.dep-description label {
     margin-bottom: 30px;
 }
 
@@ -36,4 +87,33 @@
 .result {
     padding-top: 30px;
     text-align: center;
+}
+
+
+
+#rdb1, #rdb2, #rdb3, #rdb4, #rdb5, #rdb6, #rdb7, #rdb8, #rdb9, #rdb10, #rdb11, #rdb12, #rdb13, #rdb14, #rdb15,
+#rdb16, #rdb17, #rdb18, #rdb19, #rdb20, #rdb21, #rdb22, #rdb23, #rdb24, #rdb25, #rdb26, #rdb27, #rdb28, #rdb29, #rdb30,
+#rdb31, #rdb32, #rdb33, #rdb34, #rdb35, #rdb36, #rdb37, #rdb38, #rdb39, #rdb40, #rdb41, #rdb42, #rdb43, #rdb44, #rdb45,
+#rdb46, #rdb47, #rdb48, #rdb49, #rdb50, #rdb51, #rdb52, #rdb53, #rdb54, #rdb55, #rdb56, #rdb57, #rdb58, #rdb59, #rdb60,
+#rdb61, #rdb62, #rdb63, #rdb64, #rdb65, #rdb66, #rdb67, #rdb68, #rdb69, #rdb70, #rdb71, #rdb72, #rdb73, #rdb74, #rdb75,
+#rdb76, #rdb77, #rdb78, #rdb79, #rdb80, #rdb81, #rdb82, #rdb83{
+    -webkit-appearance: none;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid white;
+    width: 16px;
+    height: 16px;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+    position: relative;
+    top: 4px;
+}
+
+#rdb1:checked, #rdb2:checked, #rdb3:checked, #rdb4:checked, #rdb5:checked, #rdb6:checked, #rdb7:checked, #rdb8:checked, #rdb9:checked, #rdb10:checked, #rdb11:checked, #rdb12:checked, #rdb13:checked, #rdb14:checked, #rdb15:checked,
+#rdb16:checked, #rdb17:checked, #rdb18:checked, #rdb19:checked, #rdb20:checked, #rdb21:checked, #rdb22:checked, #rdb23:checked, #rdb24:checked, #rdb25:checked, #rdb26:checked, #rdb27:checked, #rdb28:checked, #rdb29:checked, #rdb30:checked,
+#rdb31:checked, #rdb32:checked, #rdb33:checked, #rdb34:checked, #rdb35:checked, #rdb36:checked, #rdb37:checked, #rdb38:checked, #rdb39:checked, #rdb40:checked, #rdb41:checked, #rdb42:checked, #rdb43:checked, #rdb44:checked, #rdb45:checked,
+#rdb46:checked, #rdb47:checked, #rdb48:checked, #rdb49:checked, #rdb50:checked, #rdb51:checked, #rdb52:checked, #rdb53:checked, #rdb54:checked, #rdb55:checked, #rdb56:checked, #rdb57:checked, #rdb58:checked, #rdb59:checked, #rdb60:checked,
+#rdb61:checked, #rdb62:checked, #rdb63:checked, #rdb64:checked, #rdb65:checked, #rdb66:checked, #rdb67:checked, #rdb68:checked, #rdb69:checked, #rdb70:checked, #rdb71:checked, #rdb72:checked, #rdb73:checked, #rdb74:checked, #rdb75:checked,
+#rdb76:checked, #rdb77:checked, #rdb78:checked, #rdb79:checked, #rdb80:checked, #rdb81:checked, #rdb82:checked, #rdb83:checked {
+    border: 3px solid blue;
 }

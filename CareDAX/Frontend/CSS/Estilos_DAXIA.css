@@ -1,46 +1,62 @@
-﻿.chat-tab {
-    background-color: #4CAF50;
-    color: white;
+﻿body {
+    width: 99%;
+    height: 100%;
+    background: linear-gradient( 45deg, #3498db, #2ecc71 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    overflow-y: auto;
+}
+
+.chat-tab {
+    border: 2px solid white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(27, 133, 219, 0.5) 5px 10px 15px;
+    background-color: aquamarine;
+    color: black;
     padding: 10px 20px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin-bottom: 10px;
 }
 
-.chat-messages {
-    color: black;
+div.chat-messages {
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
-    border: 2px solid black;
+    border: 2px solid white;
     margin-bottom: 10px;
     display: block;
     width: 70vw;
     max-width: 70vw;
     box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(27, 133, 219, 0.5) 5px 10px 15px;
 }
 
 
-.chat-messages1 {
-    color: black;
+div.chat-messages1 {
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
-    border: 2px solid black;
+    border: 2px solid white;
     margin-bottom: 10px;
     display: block;
     width: 70vw;
     box-sizing: border-box;
     margin-left: auto;
+    background: transparent;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(27, 133, 219, 0.5) 5px 10px 15px;
 }
 
-.chat-messages2 {
-    color: black;
+div.chat-messages2 {
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
-    border: 2px solid black;
+    border: 2px solid white;
     margin-bottom: 10px;
     display: block;
     width: 70vw;
     box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(27, 133, 219, 0.5) 5px 10px 15px;
 }
 
 .text-container {
@@ -64,9 +80,32 @@
 }
 
 .Write-input {
-    width: 96vw;
+    width: 100vw;
     height: 4vh;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
+    border: 2px solid transparent;
+    /*width: 15em;*/
+    /*height: 2.5em;*/
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: white;
+    transition: all 0.5s;
+}
+
+.Write-input:hover,
+.Write-input:focus,
+#btnEnviar:hover,
+#btnEnviar:focus{
+    border: 2px solid white;
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    background-color: white;
+}
+
+#btnRegresar {
+    width: 100vw;
+    height: 4vh;
+    border: 2px solid white;
 }
 
 #btnEnviar {
@@ -75,10 +114,16 @@
     right: 0;
     height: 4.6vh;
     width: 7vh;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     background-color: white;
     background-image: url('../../Images/enviar.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    /**/
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    transition: all 0.5s;
+    border: 2px solid transparent;
 }

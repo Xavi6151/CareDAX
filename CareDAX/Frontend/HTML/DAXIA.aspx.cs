@@ -32,8 +32,13 @@ namespace CareDAX.Frontend.HTML
                 {
                     nombre.Text = StringsDaxia.nombreIA;
                     InfomessageValue = StringsDaxia.Infomessage + Session["usuario"] as string + StringsDaxia.Infomessage1;
+                    Infomessage.ForeColor = Color.White;
                     labelContainer.Visible = false;
                     lblRecomendaciones.Visible = false;
+                    btnRegresar.Visible = false;
+                    Input_User.ForeColor = Color.Black;
+                    Label1.ForeColor = Color.White;
+                    Label2.ForeColor = Color.White;
                 }
                 else
                 {
@@ -43,6 +48,10 @@ namespace CareDAX.Frontend.HTML
             }
         }
 
+        protected void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Principal.aspx");
+        }
 
         //Variable para saber si poner clases o no.
         protected static int clicks = 0;
@@ -55,7 +64,9 @@ namespace CareDAX.Frontend.HTML
             Input_User.ReadOnly = true;
             btnEnviar.Enabled = false;
             //Evitar ver contenido de la caja de texto para el usuario
-            Input_User.BackColor=Color.Black;
+            Input_User.BackColor=Color.White;
+            Input_User.ForeColor = Color.White;
+            
 
             if (clicks != 0)
             {
@@ -63,8 +74,8 @@ namespace CareDAX.Frontend.HTML
                 Label1.Text = Input_User.Text;
 
                 UpdatePanel1.Update();
-                Label2.Text = "NORMALIZANDO...";
-                Label2.ForeColor = System.Drawing.Color.FromArgb(255, 0, 212);
+                Label2.Text = "ANALIZANDO...";
+                Label2.ForeColor = System.Drawing.Color.White;
                 //Efecto visual para mostrar en video: normalizar
                 Timer1.Interval = 2000; // Intervalo de 2 segundos
                 Timer1.Enabled = true;
@@ -79,8 +90,8 @@ namespace CareDAX.Frontend.HTML
 
                 UpdatePanel1.Update();
                 //lblRecomendaciones.Attributes["class"] += "chat-messages2";
-                Label2.Text = "NORMALIZANDO...";
-                Label2.ForeColor = System.Drawing.Color.FromArgb(255, 0, 212);
+                Label2.Text = "ANALIZANDO...";
+                Label2.ForeColor = System.Drawing.Color.White;
                 //Efecto visual para mostrar en video: normalizar
                 Timer1.Interval = 2000; // Intervalo de 2 segundos
                 Timer1.Enabled = true;
@@ -93,8 +104,8 @@ namespace CareDAX.Frontend.HTML
         {
             //Normalizar
             oracion = iaInstance.normalizar(Input_User.Text);
-            Label2.Text = oracion;
-            Label2.ForeColor = System.Drawing.Color.Black;
+            //Label2.Text = oracion;
+            //Label2.ForeColor = System.Drawing.Color.Black;
             //Eliminar el texto de la caja de texto
             Input_User.Text = oracion;
             Timer1.Enabled = false;
@@ -110,8 +121,8 @@ namespace CareDAX.Frontend.HTML
         {
             if (tkz == 0)
             {
-                Label2.Text = "TOKENIZANDO, CONVIRTIENDO A BASE Y SELECCIONANDO PROBLEMAS CON SUS RESPECTIVAS RECOMENDACIONES...";
-                Label2.ForeColor = System.Drawing.Color.FromArgb(255, 0, 212);
+                //Label2.Text = "TOKENIZANDO, CONVIRTIENDO A BASE Y SELECCIONANDO PROBLEMAS CON SUS RESPECTIVAS RECOMENDACIONES...";
+                //Label2.ForeColor = System.Drawing.Color.FromArgb(255, 0, 212);
                 tkz++;
                 UpdatePanel1.Update();
                 Timer2.Enabled = false;
@@ -209,12 +220,15 @@ namespace CareDAX.Frontend.HTML
                     }
                     else Label2.Text = StringsDaxia.recomendacionesFallidas;
                     //Label2.Text = Session["Usuario"] as string; --Esta es para tomar el nombre de usuario
-                    Label2.ForeColor = System.Drawing.Color.Black;
+                    Label2.ForeColor = System.Drawing.Color.White;
                     Input_User.Text = "";
                     Input_User.BackColor = Color.White;
                     Input_User.ReadOnly = false;
                     btnEnviar.Enabled = true;
-
+                    Input_User.Visible = false;
+                    btnEnviar.Visible = false;
+                    btnRegresar.Visible = true;
+                    btnRegresar.Text = "Regresar a la página principal";
                     UpdatePanel1.Update();
                     Timer2.Enabled = false;
                 }
@@ -249,9 +263,9 @@ namespace CareDAX.Frontend.HTML
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         //Agregar texto de categorizacion de las recomendaciones
-                        if (recom == 0) Label2.Text += "MUY UTILES" + "<br>";
-                        else if (recom == 1) Label2.Text += "UTILES" + "<br>";
-                        else if (recom == 2) Label2.Text += "MEDIO UTILES" + "<br>";
+                        if (recom == 0) Label2.Text += "MUY ÚTILES" + "<br>";
+                        else if (recom == 1) Label2.Text += "ÚTILES" + "<br>";
+                        else if (recom == 2) Label2.Text += "MEDIO ÚTILES" + "<br>";
 
 
                         // Iterar a través de las filas y leer los datos
