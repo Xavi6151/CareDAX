@@ -14,7 +14,6 @@
                     }
                 });
             });
-
             var fullText = '<%= InfomessageValue %>';
             var index = 0;
             var interval = setInterval(function() {
