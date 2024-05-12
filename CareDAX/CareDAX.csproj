@@ -93,6 +93,7 @@
     <Content Include="Frontend\CSS\Estios_Registro.css" />
     <Content Include="Frontend\HTML\Ansiedad.aspx" />
     <Content Include="Frontend\HTML\DAXIA.aspx" />
+    <Content Include="Frontend\HTML\DAXIA.jpg" />
     <Content Include="Frontend\HTML\Depresion.aspx" />
     <Content Include="Frontend\HTML\Estres.aspx" />
     <Content Include="Frontend\HTML\index.aspx" />
@@ -101,6 +102,10 @@
     <Content Include="Frontend\HTML\Puntuacion.aspx" />
     <Content Include="Frontend\HTML\Registro.aspx" />
     <Content Include="Images\ansiedad.jpeg" />
+    <Content Include="Images\cat.png" />
+    <Content Include="Images\DAXIA.jpg" />
+    <Content Include="Images\DAXIA_PRESENTACION.jpg" />
+    <Content Include="Images\DAXIA_transparente.png" />
     <Content Include="Images\depresion.jpeg" />
     <Content Include="Images\enviar.png" />
     <Content Include="Images\estres.jpeg" />
