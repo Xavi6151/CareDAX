@@ -11,7 +11,7 @@ namespace CareDAX.Backend.Strings
         public static String description = "La Escala de Hamilton para la depresión es un cuestionario utilizado para evaluar la gravedad de los síntomas depresivos en una persona, lo que debes hacer es contestar honestamente cada pregunta ya que la puntuación depende de ello, la puntuación se determina con tus respuestas, al final no podras cambiar ninguna respuesta, por lo que debes estar muy seguro de tu respuesta antes de avanzar de pregunta, las preguntas estan hechas por el equipo de desarrollo ya que esta escala se hace con la forma de actuar de la persona, por lo tanto se acoplaron las preguntas para ser más precisos en tu resultado, el resultado se mostrara tu página principal.";
 
         //Columna
-        public static String questions = "Preguntas";
+        public static String questions = "PREGUNTAS";
 
         //Preguntas
         public static string[] valoresCambiantes = {
