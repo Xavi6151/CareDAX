@@ -27,10 +27,8 @@ h1 {
 }
 
 .form-container {
-    width: 320px;
     border-radius: 1rem;
-    background-color: rgba(17, 24, 39, 0.1);
-    border: 2px solid rgba(243, 244, 246, 1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(27, 133, 219, 0.5) 5px 10px 15px;
     padding: 2rem;
     padding-top: 0.5rem;
     color: rgba(243, 244, 246, 1);
@@ -40,6 +38,12 @@ h1 {
     text-align: center;
     font-size: 2rem;
     line-height: 2rem;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1rem;
 }
 
 .form {
