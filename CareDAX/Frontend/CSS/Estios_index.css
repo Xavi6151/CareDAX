@@ -1,2 +1,95 @@
 ﻿body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.7rem;
+    color: rgba(243, 244, 246, 1);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient( 45deg, #3498db, #2ecc71 );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur()
+}
+
+.form-container {
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px, rgba(27, 133, 219, 0.5) 5px 10px 15px;
+    padding: 2rem;
+    padding-top: 0.5rem;
+    color: rgba(243, 244, 246, 1);
+}
+
+.title {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    line-height: 1rem;
+}
+
+.input-group {
+    margin-top: 0.9rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+}
+
+    .input-group label {
+        display: block;
+        color: rgb(255, 255, 255);
+        margin-bottom: 4px;
+    }
+
+.caja {
+    width: 89.8%;
+    border-radius: 0.375rem;
+    outline: 0;
+    background-color: rgba(17, 24, 39, 0.1);
+    border: 2px solid rgba(243, 244, 246, 1);
+    padding: 0.75rem 1rem;
+    color: rgba(243, 244, 246, 1);
+}
+
+.caja:focus {
+    border-color: rgba(128, 222, 217);
+}
+
+.sign {
+    display: block;
+    width: 100%;
+    background-color: rgba(128, 222, 217);
+    padding: 0.75rem;
+    text-align: center;
+    color: rgba(17, 24, 39, 1);
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+    .sign:hover {
+        background-color: rgb(105, 194, 189);
+        cursor: pointer;
+    }
+
+.signup {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgba(156, 163, 175, 1);
 }
