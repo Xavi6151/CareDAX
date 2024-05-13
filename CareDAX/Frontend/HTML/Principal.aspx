@@ -46,8 +46,7 @@
                 </svg>
             </button>   
         </div>
-    
-        <!--CARDS: agregar onclick en cada uno para que abra los tests &  PRESENTACIÓN DAXIA Y CHAT-->
+          <!--CARDS: agregar onclick en cada uno para que abra los tests &  PRESENTACIÓN DAXIA Y CHAT-->
         <div class="bottom-bottomDAXIA">
             <asp:Button ID="ChatBot" runat="server" BorderStyle="Dotted" Text="ChatBot" class="buttonDAXIA transparente" OnClick="ChatBot_Click" />
         </div>
