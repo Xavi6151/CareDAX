@@ -70,7 +70,7 @@ namespace CareDAX.Frontend.HTML
         }
                 else 
                 {
-                    // Actualizar el mensaje de error en el UpdatePanel
+                    //Actualizar el mensaje de error en el UpdatePanel
                     lblMensajeError.Text = "Usuario y/o contraseña incorrectos";
                     lblMensajeError.Visible = true;
                 }

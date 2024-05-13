@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="../CSS/Estios_index.css" type="text/css" />
 </head>
 <body class="container">
-    <form id="form1" class="form" runat="server">
+    <form id="form1" runat="server">
         <div>
-            <h1>CareDAX</h1>
             <div class="form-container">
                 <p class="title">Inicio de Sesión</p>
                         
