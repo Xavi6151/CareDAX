@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -16,6 +17,9 @@ namespace CareDAX.Frontend.HTML
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
+            //Conteo de pase
+            int correcto = 0;
+
             //Guardar el usuario para usarlo en cualquier aspx
             Session["Usuario"] = TextBox1.Text;
             Session["Contrasenia"] = TextBox2.Text;
@@ -73,6 +77,9 @@ namespace CareDAX.Frontend.HTML
                     //Actualizar el mensaje de error en el UpdatePanel
                     lblMensajeError.Text = "Usuario y/o contraseña incorrectos";
                     lblMensajeError.Visible = true;
+
+                    //Agregar script para desaparecer el mensaje después de 5 segundos (5000 milisegundos)
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "HideMessage", "setTimeout(function() { document.getElementById('" + lblMensajeError.ClientID + "').style.display = 'none'; }, 5000);", true);
                 }
             }
         }
