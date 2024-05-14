@@ -23,11 +23,11 @@
                 </asp:UpdatePanel>
 
                 <div class="cajaGrupo">
-                    <input id="CheckBox1" type="checkbox" onclick="cambiar()"/>
-                    <label for="CheckBox1" style="display:inline;">Empresa</label>
-        </div>
-                
-                <div id="empresa" class="cajaGrupo" style="display:none;">
+                    <input id="CheckBox1" type="checkbox" onclick="cambiar()" />
+                    <label for="CheckBox1" style="display: inline;">Empresa</label>
+                </div>
+
+                <div id="empresa" class="cajaGrupo" style="display: none;">
                     <label for="TextBox1">Nombre de la empresa</label>
                     <asp:TextBox ID="TextBox1" class="caja" runat="server"></asp:TextBox>
                 </div>
@@ -51,10 +51,10 @@
                 </div>
 
                 <div class="cajaBotones">
-                    <asp:Button ID="btnRegresar" class="sign" runat="server" Text="Regresar" OnClick="btnRegresar_Click"/>
-                    <asp:Button ID="btnRegistrar" class="sign" runat="server" Text="CONTRATAR" OnClick="btnRegistrar_Click"/>
+                    <asp:Button ID="btnRegresar" class="sign" runat="server" Text="Regresar" OnClick="btnRegresar_Click" />
+                    <asp:Button ID="btnRegistrar" class="sign" runat="server" Text="CONTRATAR" OnClick="btnRegistrar_Click" />
                 </div>
-                
+
             </div>
         </div>
     </form>
@@ -71,6 +71,6 @@
             document.getElementById("empresa").style.display = "block";
             desplegado = true;
         }
-            
+
     }
 </script>
