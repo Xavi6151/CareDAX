@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Principal.aspx.cs" Inherits="CareDAX.Frontend.HTML.Principal" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Principal.aspx.cs" Inherits="CareDAX.Frontend.HTML.Principal" %>
 
 <!DOCTYPE html>
 
@@ -6,156 +6,259 @@
 <head runat="server">
     <title>Principal</title>
     <link rel="stylesheet" href="../CSS/Estilos_Principal.css" type="text/css" />
-    <link rel="stylesheet" href="../../Content/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../CSS/Estilos_Perfil.css" type="text/css" />
-    <link rel="stylesheet" href="../CSS/Estilos_Ayuda.css" type="text/css" />
 </head>
 <body>
-    <form id="form1" runat="server">
-        <nav class="navbar navbar_style bg-primary">
-            <div class="d-flex">
-                <!-- Contenedor para alinear los botones -->
-                <button type="button" class="btn btn-primary btn_ayuda" data-bs-toggle="modal" data-bs-target="#exampleModal" aria-controls="staticBackdrop">ℹ️</button>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" style="background-color: rgb(17,157,164); font-size: 17px;">
-                        Tests
-                    </button>
-                    <ul class="dropdown-menu w-100 text-center show" style="background-color: rgb(174,236,239);">
-                        <li><a class="dropdown-item" href="Estres.aspx" style="color: rgb(48,102,190); font-size: 17px;">Estrés</a></li>
-                        <li><a class="dropdown-item" href="Ansiedad.aspx" style="color: rgb(48,102,190); font-size: 17px;">Ansiedad</a></li>
-                        <li><a class="dropdown-item" href="Depresion.aspx" style="color: rgb(48,102,190); font-size: 17px;">Depresión</a></li>
-                    </ul>
+    <form id="form1" runat="server" class="container">
+
+        <!--NAVBAR-->       
+        <div class="button-container">
+            <%--<button class="button" >
+               <%-- <%--<asp:Button ID="Home" runat="server" class="button-content_Test transparente" OnClick="Home_Click"/>--%>
+               <%-- <svg
+                    class="icon"
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 1024 1024"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z">
+                    </path>
+                </svg>
+            </button>--%>
+            <button class="button">
+                <svg
+                    class="icon"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12" y2="8"></line>
+                </svg>
+            </button>   
+        </div>
+          <!--CARDS: agregar onclick en cada uno para que abra los tests &  PRESENTACIÓN DAXIA Y CHAT-->
+        <div class="bottom-bottomDAXIA">
+            <asp:Button ID="ChatBot" runat="server" BorderStyle="Dotted" Text="ChatBot" class="buttonDAXIA transparente" OnClick="ChatBot_Click" />
+        </div>
+        <div class="card-container">
+            <div class="card-containerDAXIA2" style="transform: translate(-50%, 0%);">
+                <div class="cardDAXIA2">
+                    <div class="img-content">
+                        <b style="color: turquoise; border-color: white;">DAXIA</b>
+                        <img src="../../Images/DAXIA_transparente.png" alt="Imagen de perfil" class="ajuste">
+
+                        <%--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-miterlimit="2" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd">--%>
+                        <%--<path fill-rule="nonzero" d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z"></path></svg>--%>
+                    </div>
+                    <div class="content">
+                        <span class="card__subtitle">Podrás contarle todo lo que por sentirte juzgado no puedes compartir a nadie más, podrá determinar un nivel del padecimiento que podrías tener (estrés, ansiedad o depresión) al igual que recomendaciones que podrán ayudarte a disminuirlo.
+                 <br /><b>No somos terapeutas y no reemplazaremos uno.</b>
+                            <br />
+                            Consulta el apartado de "Ayuda" para atender dudas sobre DAXIA.
+                        </span>
+
+                    </div>
+
                 </div>
             </div>
-            <a class="navbar-brand" style="color: white; font-size: 24px;">CareDaX</a>
-            <a class="navbar-link" href="#">
-                <asp:Image ID="Image2" runat="server" ImageUrl="~/Images/hombre.png" Width="45" Height="45" /></a>
-
-        </nav>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content custom-modal">
-                    <!-- Agregar la clase personalizada custom-modal -->
-                    <div class="modal-header">
-                        <h2 class="modal-title fs-5" id="exampleModalLabel">Ayuda</h2>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="card">
+                <div class="content" style="    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+">
+                    <div class="back">
+                        <div class="back-content">
+                            <!-- Reemplazar el contenido del svg con el ícono de una persona -->
+                            <svg xmlns="http://www.w3.org/2000/svg" height="50px" width="50px" viewBox="0 0 512 512">
+                                <path d="M256 288c70.688 0 128-57.312 128-128S326.688 32 256 32 128 89.312 128 160s57.312 128 128 128zm0 32c-96 0-224 49.28-224 147.712V480h448v-11.296C480 369.28 352 320 256 320z" fill="#ffffff" />
+                            </svg>
+                            <strong>Nivel Estrés</strong>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <!-- Estructura de notas de ayuda -->
-                        <div class="note">
-                            <h6>¿Cómo funciona el chatbot?</h6>
-                            <p>Daxia comenzará una conversación contigo dónde podrás expresar como te sientes el dia de hoy</p>
+                    <div class="front">
+                        <div class="img">
+                            <div class="circle"></div>
+                            <div class="circle" id="right"></div>
+                            <div class="circle" id="bottom"></div>
                         </div>
-                        <div class="note">
-                            <h6>¿Se quedan guardadas las conversaciones?</h6>
-                            <p>Por confidencialidad no se guardan, lo que sí se guarda en la pantalla principal son las recomendaciones que te hace Daxia junto con la fecha correspondiente.</p>
+                        <div class="front-content">
+                            <small class="badge">Estrés</small>
+
+                            <div class="description">
+                                <div class="title">
+                                    <p class="title">
+                                        <asp:Label ID="CategoriaEstres" runat="server" Text="Label"></asp:Label>
+                                    </p>
+                                    <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                        <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                                            <g transform="scale(8,8)">
+                                                <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
-                        <div class="note">
-                            <h6>¿Hasta dónde me ayudará Daxia?</h6>
-                            <p>Daxia no busca suplantar el trabajo de un psicológo promedio, pero dará consejos o diagnósticos lo más cercanos a la realidad. Su información está respaldada por estudios válidados por psicológos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <div class="back">
+                        <div class="back-content">
+                            <!-- Reemplazar el contenido del svg con el ícono de una persona -->
+                            <svg xmlns="http://www.w3.org/2000/svg" height="50px" width="50px" viewBox="0 0 512 512">
+                                <path d="M256 288c70.688 0 128-57.312 128-128S326.688 32 256 32 128 89.312 128 160s57.312 128 128 128zm0 32c-96 0-224 49.28-224 147.712V480h448v-11.296C480 369.28 352 320 256 320z" fill="#ffffff" />
+                            </svg>
+                            <strong>Nivel Ansiedad</strong>
                         </div>
-                        <div class="note">
-                            <h6>¿Qué hacer si noto que Daxia me ayuda pero considero tener un problema más grave?</h6>
-                            <p>Se recomienda buscar ayuda profesional</p>
+                    </div>
+                    <div class="front">
+                        <div class="img">
+                            <div class="circle"></div>
+                            <div class="circle" id="right"></div>
+                            <div class="circle" id="bottom"></div>
                         </div>
-                        <div class="note">
-                            <h6>¿Quieres conocer más sobre este proyecto o hacer sugerencias de mejora sobre nuestro servicio?</h6>
-                            <p>
-                                Envía correo a cualquiera de los siguientes correos:
-                        <b>azucenacamargo7@gmail.com</b>
-                            </p>
+                        <div class="front-content">
+                            <small class="badge">Ansiedad</small>
+                            <div class="description">
+                                <div class="title">
+                                    <p class="title">
+                                        <asp:Label ID="CategoriaAnsiedad" runat="server" Text="Label"></asp:Label>
+                                    </p>
+                                    <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                        <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                                            <g transform="scale(8,8)">
+                                                <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <div class="back">
+                        <div class="back-content">
+                            <!-- Reemplazar el contenido del svg con el ícono de una persona -->
+                            <svg xmlns="http://www.w3.org/2000/svg" height="50px" width="50px" viewBox="0 0 512 512">
+                                <path d="M256 288c70.688 0 128-57.312 128-128S326.688 32 256 32 128 89.312 128 160s57.312 128 128 128zm0 32c-96 0-224 49.28-224 147.712V480h448v-11.296C480 369.28 352 320 256 320z" fill="#ffffff" />
+                            </svg>
+                            <strong>Nivel Depresión</strong>
+                        </div>
+                    </div>
+                    <div class="front">
+                        <div class="img">
+                            <div class="circle"></div>
+                            <div class="circle" id="right"></div>
+                            <div class="circle" id="bottom"></div>
+                        </div>
+                        <div class="front-content">
+                            <small class="badge">Depresión</small>
+                            <div class="description">
+                                <div class="title">
+                                    <p class="title">
+                                        <asp:Label ID="CategoriaDepresion" runat="server" Text="Label"></asp:Label>
+                                    </p>
+                                    <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                        <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                                            <g transform="scale(8,8)">
+                                                <path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Perfil 
-        <div id="tarjetaFlotante" class="tarjeta">
-            <div class="contenido">
-                <asp:Label ID="Usuario" runat="server" Text="Label"></asp:Label>
-                <button id="editarUsuarioBtn" type="button" class="btn-editar-perfil ">✏️</button></h5>
-                <button id="btn-cerrarSesion" type="button" class="btn btn-secondary custom-btn-primary">Cerrar sesión</button>
-            </div>
-        </div>-->
-        <div id="tarjetaFlotante" class="tarjeta">
-             <div class="card">
-                <div class="card__img"><svg width="100%" xmlns="http://www.w3.org/2000/svg"><rect height="450" width="540" fill="#ffffff"></rect><defs><linearGradient gradientTransform="rotate(222,648,379)" y2="100%" y1="0" x2="0" x1="0" gradientUnits="userSpaceOnUse" id="a"><stop stop-color="#ffffff" offset="0"></stop><stop stop-color="#FC726E" offset="1"></stop></linearGradient><pattern viewBox="0 0 1080 900" y="0" x="0" height="250" width="300" id="b" patternUnits="userSpaceOnUse"><g fill-opacity="0.5"><polygon points="90 150 0 300 180 300" fill="#444"></polygon><polygon points="90 150 180 0 0 0"></polygon><polygon points="270 150 360 0 180 0" fill="#AAA"></polygon><polygon points="450 150 360 300 540 300" fill="#DDD"></polygon><polygon points="450 150 540 0 360 0" fill="#999"></polygon><polygon points="630 150 540 300 720 300"></polygon><polygon points="630 150 720 0 540 0" fill="#DDD"></polygon><polygon points="810 150 720 300 900 300" fill="#444"></polygon><polygon points="810 150 900 0 720 0" fill="#FFF"></polygon><polygon points="990 150 900 300 1080 300" fill="#DDD"></polygon><polygon points="990 150 1080 0 900 0" fill="#444"></polygon><polygon points="90 450 0 600 180 600" fill="#DDD"></polygon><polygon points="90 450 180 300 0 300"></polygon><polygon points="270 450 180 600 360 600" fill="#666"></polygon><polygon points="270 450 360 300 180 300" fill="#AAA"></polygon><polygon points="450 450 360 600 540 600" fill="#DDD"></polygon><polygon points="450 450 540 300 360 300" fill="#999"></polygon><polygon points="630 450 540 600 720 600" fill="#999"></polygon><polygon points="630 450 720 300 540 300" fill="#FFF"></polygon><polygon points="810 450 720 600 900 600"></polygon><polygon points="810 450 900 300 720 300" fill="#DDD"></polygon><polygon points="990 450 900 600 1080 600" fill="#AAA"></polygon><polygon points="990 450 1080 300 900 300" fill="#444"></polygon><polygon points="90 750 0 900 180 900" fill="#222"></polygon><polygon points="270 750 180 900 360 900"></polygon><polygon points="270 750 360 600 180 600" fill="#DDD"></polygon><polygon points="450 750 540 600 360 600"></polygon><polygon points="630 750 540 900 720 900"></polygon><polygon points="630 750 720 600 540 600" fill="#444"></polygon><polygon points="810 750 720 900 900 900" fill="#AAA"></polygon><polygon points="810 750 900 600 720 600" fill="#666"></polygon><polygon points="990 750 900 900 1080 900" fill="#999"></polygon><polygon points="180 0 90 150 270 150" fill="#999"></polygon><polygon points="360 0 270 150 450 150" fill="#444"></polygon><polygon points="540 0 450 150 630 150" fill="#FFF"></polygon><polygon points="900 0 810 150 990 150"></polygon><polygon points="0 300 -90 450 90 450" fill="#222"></polygon><polygon points="0 300 90 150 -90 150" fill="#FFF"></polygon><polygon points="180 300 90 450 270 450" fill="#FFF"></polygon><polygon points="180 300 270 150 90 150" fill="#666"></polygon><polygon points="360 300 270 450 450 450" fill="#222"></polygon><polygon points="360 300 450 150 270 150" fill="#FFF"></polygon><polygon points="540 300 450 450 630 450" fill="#444"></polygon><polygon points="540 300 630 150 450 150" fill="#222"></polygon><polygon points="720 300 630 450 810 450" fill="#AAA"></polygon><polygon points="720 300 810 150 630 150" fill="#666"></polygon><polygon points="900 300 810 450 990 450" fill="#FFF"></polygon><polygon points="900 300 990 150 810 150" fill="#999"></polygon><polygon points="0 600 -90 750 90 750"></polygon><polygon points="0 600 90 450 -90 450" fill="#666"></polygon><polygon points="180 600 90 750 270 750" fill="#AAA"></polygon><polygon points="180 600 270 450 90 450" fill="#444"></polygon><polygon points="360 600 270 750 450 750" fill="#444"></polygon><polygon points="360 600 450 450 270 450" fill="#999"></polygon><polygon points="540 600 630 450 450 450" fill="#666"></polygon><polygon points="720 600 630 750 810 750" fill="#222"></polygon><polygon points="900 600 810 750 990 750" fill="#FFF"></polygon><polygon points="900 600 990 450 810 450" fill="#222"></polygon><polygon points="0 900 90 750 -90 750" fill="#DDD"></polygon><polygon points="180 900 270 750 90 750" fill="#444"></polygon><polygon points="360 900 450 750 270 750" fill="#FFF"></polygon><polygon points="540 900 630 750 450 750" fill="#AAA"></polygon><polygon points="720 900 810 750 630 750" fill="#FFF"></polygon><polygon points="900 900 990 750 810 750" fill="#222"></polygon><polygon points="1080 300 990 450 1170 450" fill="#222"></polygon><polygon points="1080 300 1170 150 990 150" fill="#FFF"></polygon><polygon points="1080 600 990 750 1170 750"></polygon><polygon points="1080 600 1170 450 990 450" fill="#666"></polygon><polygon points="1080 900 1170 750 990 750" fill="#DDD"></polygon></g></pattern></defs><rect height="100%" width="100%" fill="url(#a)" y="0" x="0"></rect><rect height="100%" width="100%" fill="url(#b)" y="0" x="0"></rect></svg></div>
-                <div class="card__avatar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><circle r="60" fill="#ff8475" cy="64" cx="64"></circle><circle r="48" opacity=".4" fill="#f85565" cy="64" cx="64"></circle><path fill="#7f3838" d="m64 14a32 32 0 0 1 32 32v41a6 6 0 0 1 -6 6h-52a6 6 0 0 1 -6-6v-41a32 32 0 0 1 32-32z"></path><path opacity=".4" fill="#393c54" d="m62.73 22h2.54a23.73 23.73 0 0 1 23.73 23.73v42.82a4.45 4.45 0 0 1 -4.45 4.45h-41.1a4.45 4.45 0 0 1 -4.45-4.45v-42.82a23.73 23.73 0 0 1 23.73-23.73z"></path><circle r="7" fill="#fbc0aa" cy="65" cx="89"></circle><path fill="#4bc190" d="m64 124a59.67 59.67 0 0 0 34.69-11.06l-3.32-9.3a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.32 9.3a59.67 59.67 0 0 0 34.69 11.06z"></path><path opacity=".3" fill="#356cb6" d="m45 110 5.55 2.92-2.55 8.92a60.14 60.14 0 0 0 9 1.74v-27.08l-12.38 10.25a2 2 0 0 0 .38 3.25z"></path><path opacity=".3" fill="#356cb6" d="m71 96.5v27.09a60.14 60.14 0 0 0 9-1.74l-2.54-8.93 5.54-2.92a2 2 0 0 0 .41-3.25z"></path><path fill="#fff" d="m57 123.68a58.54 58.54 0 0 0 14 0v-25.68h-14z"></path><path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none" d="m64 88.75v9.75"></path><circle r="7" fill="#fbc0aa" cy="65" cx="39"></circle><path fill="#ffd8c9" d="m64 91a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z"></path><path fill="#bc5b57" d="m91.49 51.12v-4.72c0-14.95-11.71-27.61-26.66-28a27.51 27.51 0 0 0 -28.32 27.42v5.33a2 2 0 0 0 2 2h6.81a8 8 0 0 0 6.5-3.33l4.94-6.88a18.45 18.45 0 0 1 1.37 1.63 22.84 22.84 0 0 0 17.87 8.58h13.45a2 2 0 0 0 2.04-2.03z"></path><path style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1" d="m62.76 36.94c4.24 8.74 10.71 10.21 16.09 10.21h5"></path><path style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1" d="m71 35c2.52 5.22 6.39 6.09 9.6 6.09h3"></path><circle r="3" fill="#515570" cy="62.28" cx="76"></circle><circle r="3" fill="#515570" cy="62.28" cx="52"></circle><ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="50.42"></ellipse><ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="77.58"></ellipse><g stroke-linejoin="round" stroke-linecap="round" fill="none"><path stroke-width="4" stroke="#fbc0aa" d="m64 67v4"></path><path stroke-width="2" stroke="#515570" opacity=".2" d="m55 56h-9.25"></path><path stroke-width="2" stroke="#515570" opacity=".2" d="m82 56h-9.25"></path></g><path opacity=".4" fill="#f85565" d="m64 84c5 0 7-3 7-3h-14s2 3 7 3z"></path><path fill="#f85565" d="m65.07 78.93-.55.55a.73.73 0 0 1 -1 0l-.55-.55c-1.14-1.14-2.93-.93-4.27.47l-1.7 1.6h14l-1.66-1.6c-1.34-1.4-3.13-1.61-4.27-.47z"></path></svg></div>
-                <div class="card__title"><asp:Label ID="UsuarioPerfil" runat="server" Text="Label"></asp:Label></div>
-                <div class="card__wrapper">
-                    <button class="card__btn">Cerrar Sesión</button>
-                </div>
-            </div>
+
+
+        <!--TESTs -->
+        <div class="button_containerTest">
+            <button class="buttonTest">
+                <asp:Button ID="TestEstres" runat="server" Text="Test Estrés" class="button-content_Test transparente" OnClick="TestEstres_Click"/>
+            </button>
+            <button class="buttonTest">
+                <asp:Button ID="TestAnsiedad" runat="server" Text="Test Ansiedad" class="button-content_Test transparente"  OnClick="TestAnsiedad_Click"/>
+            </button>
+            <button class="buttonTest">
+                <asp:Button ID="TestDepresion" runat="server" Text="Test Depresión" class="button-content_Test transparente" OnClick="TestDepresion_Click" />
+            </button>
         </div>
         
-
-        <!--Categorizaciones-->
-
-        <div class="container" style="margin-top: 50px;">
-            <h4>Tus resultados</h4>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card border-2 row justify-content-center m-5" style="width: 19rem;">
-                        <img src="../../Images/estres.jpeg" class="card-img-top p-2" alt=""/>
-                        <div class="card-body">
-                            <h5 class="card-title">Estrés</h5>
-                            <asp:Label ID="CategoriaEstres" runat="server" Text=""></asp:Label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-2 row justify-content-center p-2 m-5 " style="width: 19rem;">
-                        <img src="../../Images/ansiedad.jpeg" class="card-img-top p-2" alt=""/>
-                        <div class="card-body">
-                            <h5 class="card-title">Ansiedad</h5>
-                            <asp:Label ID="CategoriaAnsiedad" runat="server" Text=""></asp:Label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-2 row justify-content-center p-2 m-5 " style="width: 19rem;">
-                        <img src="../../Images/depresion.jpeg" class="card-img-top p-2" alt=""/>
-                        <div class="card-body">
-                            <h5 class="card-title">Depresión</h5>
-                            <asp:Label ID="CategoriaDepresion" runat="server" Text=""></asp:Label>
-                        </div>
-                    </div>
+        <!--PERFIL-->
+        <button id="btn-messagePerfil" class="button-messagePerfil">
+            <div class="content-avatar">
+                <div class="status-user"></div>
+                <div class="avatar" style="display: flex; justify-content: center; align-items: center;">
+                    <img src="../../Images/DAXIA.jpg" alt="Avatar" style="max-width: 100%; max-height: 100%;">
                 </div>
             </div>
-        </div>
-
-        <div class="prin-container">
-    <div class="IA">
-        <button class="chatBtn">
-            <span class="tooltip">Hablar con DAXIA</span>
-            <asp:Button ID="ButtonRec" runat="server" OnClick="ButtonRec_Click" />
+            <div class="notice-content">
+                <div class="username">
+                    <asp:Label ID="UserName" runat="server"></asp:Label>
+                </div>
+                <asp:Button ID="CerrarSesion" runat="server" OnClick="CerrarSesion_Click" CssClass="transparente" Text="Cerrar Sesión"></asp:Button>
+            </div>
         </button>
-    </div>
-</div>
-    </form>
+
+      
+    </form> 
+        <!--HELP-->
+      <%--  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static"   >
+     <div class="modal-dialog">
+         <div class="modal-content custom-modal">
+             <!-- Agregar la clase personalizada custom-modal -->
+             <div class="modal-header">
+                 <h2 class="modal-title fs-5" id="exampleModalLabel">Ayuda</h2>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+                 <!-- Estructura de notas de ayuda -->
+                 <div class="note">
+                     <h6>¿Cómo funciona el chatbot?</h6>
+                     <p>Daxia comenzará una conversación contigo dónde podrás expresar como te sientes el dia de hoy</p>
+                 </div>
+                 <div class="note">
+                     <h6>¿Se quedan guardadas las conversaciones?</h6>
+                     <p>Por confidencialidad no se guardan, lo que sí se guarda en la pantalla principal son las recomendaciones que te hace Daxia junto con la fecha correspondiente.</p>
+                 </div>
+                 <div class="note">
+                     <h6>¿Hasta dónde me ayudará Daxia?</h6>
+                     <p>Daxia no busca suplantar el trabajo de un psicológo promedio, pero dará consejos o diagnósticos lo más cercanos a la realidad. Su información está respaldada por estudios válidados por psicológos</p>
+                 </div>
+                 <div class="note">
+                     <h6>¿Qué hacer si noto que Daxia me ayuda pero considero tener un problema más grave?</h6>
+                     <p>Se recomienda buscar ayuda profesional</p>
+                 </div>
+                 <div class="note">
+                     <h6>¿Quieres conocer más sobre este proyecto o hacer sugerencias de mejora sobre nuestro servicio?</h6>
+                     <p>
+                         Envía correo a cualquiera de los siguientes correos:
+                 <b>caredax@gmail.com</b>
+                     </p>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>--%>
 </body>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const mostrarTarjetaBtn = document.getElementById("Image2");
-        const tarjetaFlotante = document.getElementById("tarjetaFlotante");
 
-        mostrarTarjetaBtn.addEventListener("click", function (event) {
-            tarjetaFlotante.style.display = "block";
-            event.stopPropagation();
-        });
-
-        tarjetaFlotante.addEventListener("click", function (event) {
-            event.stopPropagation();
-        });
-
-        document.addEventListener("click", function (event) {
-            if (!tarjetaFlotante.contains(event.target) && event.target !== mostrarTarjetaBtn) {
-                tarjetaFlotante.style.display = "none";
-            }
-        });
-
-    });
 </script>
 </html>
 

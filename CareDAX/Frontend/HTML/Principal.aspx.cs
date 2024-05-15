@@ -38,8 +38,8 @@ namespace CareDAX.Frontend.HTML
             //Label11.Text = StringsPrincipal.level_Dep5;
             //Label11.ForeColor = System.Drawing.Color.FromArgb(255, 0, 0);
 
-            UsuarioPerfil.Text = Session["usuario"] as String;
-            Usuario.Text = Session["usuario"] as String;
+            //UsuarioPerfil.Text = Session["usuario"] as String;
+            UserName.Text = Session["usuario"] as String;
 
             AsignarCategoria("ansiedad");
             AsignarCategoria("estres");
@@ -51,34 +51,50 @@ namespace CareDAX.Frontend.HTML
             //Button4.Text = StringsPrincipal.DAXIA;
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void TestEstres_Click(object sender, EventArgs e)
         {
             //Navegar al aspx "Estres.aspx"
             Response.Redirect("Estres.aspx");
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void TestAnsiedad_Click(object sender, EventArgs e)
         {
             //Navegar al aspx "Ansiedad.aspx"
             Response.Redirect("Ansiedad.aspx");
         }
 
-        protected void Button3_Click(object sender, EventArgs e)
+        protected void TestDepresion_Click(object sender, EventArgs e)
         {
             //Navegar al aspx "Depresion.aspx"
             Response.Redirect("Depresion.aspx");
         }
 
-        protected void Button4_Click(object sender, EventArgs e)
+        protected void CerrarSesion_Click(object sender, EventArgs e)
         {
-            //Navegar al aspx "DAXIA.aspx"
+            //redirigir a login y limpiar variables de usuario y contraseña
+                //Session["usuario"] = "";
+                Response.Redirect("index.aspx"); 
+        }
+
+        protected void ChatBot_Click(object sender, EventArgs e)
+        {
+            //redirigir a login y limpiar variables de usuario y contraseña
+            //Session["usuario"] = "";
             Response.Redirect("DAXIA.aspx");
         }
 
-        protected void ButtonRec_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            //Navegar al aspx "DAXIA.aspx"
+            //redirigir a login y limpiar variables de usuario y contraseña
+            //Session["usuario"] = "";
             Response.Redirect("DAXIA.aspx");
+        }
+
+        protected void Home_Click(object sender, EventArgs e)
+        {
+            //redirigir a login y limpiar variables de usuario y contraseña
+            //Session["usuario"] = "";
+            Response.Redirect("Principal.aspx");
         }
 
 
