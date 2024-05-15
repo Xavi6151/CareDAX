@@ -31,8 +31,8 @@
                     <label for="TextBox2">Contraseña</label>
                     <asp:TextBox ID="TextBox2" type="password" class="caja" runat="server"></asp:TextBox>
                 </div>
-                <asp:Button ID="btnEnviar" class="sign" runat="server" Text="ENTRAR" OnClick="btnEnviar_Click"/>
-                <asp:Button ID="btnPTS" class="sign" runat="server" Text="¿Eres nuevo? Regístrate" OnClick="btnPTS_Click"/>
+                <asp:Button ID="btnEnviar" class="sign" runat="server" Text="ENTRAR" OnClick="btnEnviar_Click" />
+                <asp:Button ID="btnPTS" class="sign" runat="server" Text="¿Eres nuevo? Regístrate" OnClick="btnPTS_Click" />
             </div>
         </div>
     </form>

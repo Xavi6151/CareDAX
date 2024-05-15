@@ -16,7 +16,7 @@ namespace CareDAX.Frontend.HTML
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if(TextBox2.Text.Length == 0 || TextBox3.Text.Length == 0 || TextBox4.Text.Length == 0 || TextBox5.Text.Length == 0)
+            if(TextBox2.Text.Length == 0 || TextBox3.Text.Length == 0 || TextBox4.Text.Length == 0 || TextBox5.Text.Length == 0 || TextBox7.Text.Length == 0)
             {
                 lblMensajeError.Text = "No dejes campos vacíos";
                 lblMensajeError.Visible = true;
