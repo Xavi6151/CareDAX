@@ -7,17 +7,24 @@
     <title>DAXIA</title>
     <link rel="stylesheet" href="../CSS/Estilos_DAXIA.css"/>
         <script>
+            window.addEventListener('load', function () {
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                    }
+                });
+            });
             var fullText = '<%= InfomessageValue %>';
-    var index = 0;
-    var interval = setInterval(function() {
-        var infomessage = document.getElementById('<%= Infomessage.ClientID %>');
-        if (index < fullText.length) {
-            infomessage.innerHTML += fullText.charAt(index);
-            index++;
-        } else {
-            clearInterval(interval);
-        }
-    }, 10);
+            var index = 0;
+            var interval = setInterval(function() {
+                var infomessage = document.getElementById('<%= Infomessage.ClientID %>');
+                if (index < fullText.length) {
+                    infomessage.innerHTML += fullText.charAt(index);
+                    index++;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 10);
         </script>
     <!--Ayuda del mensaje 1-->
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
@@ -50,6 +57,7 @@
                         <div class="input-container">
                             <asp:TextBox Id="Input_User" CssClass="Write-input" runat="server" placeholder="Escribe aquí"></asp:TextBox>
                             <asp:Button Id="btnEnviar" runat="server" Text="" OnClick="btnEnviar_Click" UseSubmitBehavior="false"/>
+                            <asp:Button Id="btnRegresar" runat="server" Text="" OnClick="btnRegresar_Click" UseSubmitBehavior="false"/>
                         </div>
                     </div>
                 </div>

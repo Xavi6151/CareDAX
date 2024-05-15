@@ -1,4 +1,7 @@
-﻿body {
+﻿form {
+    background-color: rgb(174,236,239);
+    font-family: /*'Lucida Sans Typewriter' Courier New'*/ 'Imprint MT Shadow' /*Bahnschrift*/;
+    font-size: 17px;
 }
 
 .image_user {
@@ -38,6 +41,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    position: relative;
 }
 
 .btn_ayuda {
@@ -48,4 +52,106 @@
     padding: 5px 10px;
     margin-left: 10px;
     cursor: pointer;
+}
+
+.offcanvas-body {
+    padding: 10px;
+}
+
+.dropdown-menu {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu a.dropdown-item {
+    color: #212529;
+}
+
+.dropdown-menu a.dropdown-item:hover {
+        background-color: #f8f9fa;
+        color: #007bff;
+}
+
+.offcanvas-title {
+    color: #007bff;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+    .navbar .dropdown {
+        margin-right: 20px;
+    }
+
+/*estilos botón chat*/
+
+.chatBtn {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: #8FD3E3; /* Azul claro */
+    background-image: linear-gradient(147deg, #8FD3E3, #B0E0E6, #8FD3E3); /* Gradiente azul */
+    cursor: pointer;
+    padding-top: 3px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+    position: relative;
+    background-size: 300%;
+    background-position: left;
+    transition-duration: 1s;
+}
+
+.tooltip {
+    position: absolute;
+    top: -40px;
+    opacity: 0;
+    background-color: #BFE0EF; /* Azul natural */
+    color: #2C3E50; /* Azul oscuro */
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+}
+
+.chatBtn:hover .tooltip {
+    opacity: 1;
+    transition-duration: .5s;
+}
+
+.chatBtn:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+#ButtonRec {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    padding-top: 3px;
+    position: relative;
+    background-size: 300%;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: url('../../Images/Mensaje.png');
+    background-size: auto 90%;
+    background-position: center;
 }

@@ -1,5 +1,4 @@
-﻿
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CareDAX.Frontend.HTML.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CareDAX.Frontend.HTML.index" %>
 
 <!DOCTYPE html>
 
@@ -14,7 +13,6 @@
             <div class="contenedorFormulario">
                 <p class="mainTitle">CareDAX</p>
                 <p class="title">Inicio de Sesión</p>
-                        
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
@@ -22,7 +20,7 @@
                         <asp:Label ID="lblMensajeError" class="subtitle" runat="server" ForeColor="Red" Visible="false"></asp:Label>
                     </ContentTemplate>
                 </asp:UpdatePanel>
-             
+
                 <div class="cajaGrupo">
                     <label for="TextBox1">Usuario</label>
                     <asp:TextBox ID="TextBox1" class="caja" runat="server"></asp:TextBox>

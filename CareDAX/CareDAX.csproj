@@ -100,8 +100,12 @@
     <Content Include="Frontend\HTML\Principal.aspx" />
     <Content Include="Frontend\HTML\Puntuacion.aspx" />
     <Content Include="Frontend\HTML\Registro.aspx" />
+    <Content Include="Images\ansiedad.jpeg" />
+    <Content Include="Images\depresion.jpeg" />
     <Content Include="Images\enviar.png" />
+    <Content Include="Images\estres.jpeg" />
     <Content Include="Images\hombre.png" />
+    <Content Include="Images\Mensaje.png" />
     <Content Include="Images\mujer.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
