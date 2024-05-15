@@ -86,6 +86,10 @@ h1 {
         border-color: rgba(128, 222, 217);
     }
 
+.cajaPersonalizada{
+    max-width: 40%;
+}
+
 .sign {
     width: 40%;
     background-color: rgba(128, 222, 217);
@@ -108,4 +112,10 @@ h1 {
     flex-direction: row;
     justify-content: space-around;
     padding-top: 0.5rem;
+}
+
+.grupoDoble {
+    display: flex;
+    justify-content: space-between;
+    max-width: 93.5%;
 }
