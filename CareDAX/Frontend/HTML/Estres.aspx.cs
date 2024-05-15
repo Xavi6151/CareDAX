@@ -43,6 +43,31 @@ namespace CareDAX.Frontend.HTML
                     //Botones
                     btnReturn.Text = StringsEstres.but_return;
                     btnCalculate.Text = StringsEstres.but_calculate;
+
+                    //CAMBIAR TAMAÑO DE LETRA
+
+                    description.Style["font-size"] = "18px";
+
+                    lblCol1.Style["font-size"] = "18px";
+                    lblCol2.Style["font-size"] = "18px";
+                    lblCol3.Style["font-size"] = "18px";
+                    lblCol4.Style["font-size"] = "18px";
+                    lblCol5.Style["font-size"] = "18px";
+                    lblCol6.Style["font-size"] = "18px";
+
+                    lblQues1.Style["font-size"] = "18px";
+                    lblQues2.Style["font-size"] = "18px";
+                    lblQues3.Style["font-size"] = "18px";
+                    lblQues4.Style["font-size"] = "18px";
+                    lblQues5.Style["font-size"] = "18px";
+                    lblQues6.Style["font-size"] = "18px";
+                    lblQues7.Style["font-size"] = "18px";
+                    lblQues8.Style["font-size"] = "18px";
+                    lblQues9.Style["font-size"] = "18px";
+                    lblQues10.Style["font-size"] = "18px";
+
+                    btnReturn.Style["font-size"] = "18px";
+                    btnCalculate.Style["font-size"] = "18px";
                 }
                 else
                 {

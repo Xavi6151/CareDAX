@@ -39,6 +39,13 @@ namespace CareDAX.Frontend.HTML
                     Input_User.ForeColor = Color.Black;
                     Label1.ForeColor = Color.White;
                     Label2.ForeColor = Color.White;
+                    //Cambiar tamaños de letra
+                    nombre.Style["font-size"] = "20px";
+                    Infomessage.Style["font-size"] = "18px";
+                    labelContainer.Style["font-size"] = "18px";
+                    lblRecomendaciones.Style["font-size"] = "18px";
+                    Input_User.Style["font-size"] = "18px";
+                    btnRegresar.Style["font-size"] = "18px";
                 }
                 else
                 {

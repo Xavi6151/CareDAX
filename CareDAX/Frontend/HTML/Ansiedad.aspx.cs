@@ -50,6 +50,37 @@ namespace CareDAX.Frontend.HTML
                     //Botones
                     btnReturn.Text = StringsAnsiedad.but_return;
                     btnCalculate.Text = StringsAnsiedad.but_calculate;
+
+                    //CAMBIAR TAMAÑO DE LETRA
+                    description.Style["font-size"] = "18px";
+
+                    lblCol1.Style["font-size"] = "18px";
+                    lblCol2.Style["font-size"] = "18px";
+                    lblCol3.Style["font-size"] = "18px";
+                    lblCol4.Style["font-size"] = "18px";
+                    lblCol5.Style["font-size"] = "18px";
+
+                    lblQues1.Style["font-size"] = "18px";
+                    lblQues2.Style["font-size"] = "18px";
+                    lblQues3.Style["font-size"] = "18px";
+                    lblQues4.Style["font-size"] = "18px";
+                    lblQues5.Style["font-size"] = "18px";
+                    lblQues6.Style["font-size"] = "18px";
+                    lblQues7.Style["font-size"] = "18px";
+                    lblQues8.Style["font-size"] = "18px";
+                    lblQues9.Style["font-size"] = "18px";
+                    lblQues10.Style["font-size"] = "18px";
+                    lblQues11.Style["font-size"] = "18px";
+                    lblQues12.Style["font-size"] = "18px";
+                    lblQues13.Style["font-size"] = "18px";
+                    lblQues14.Style["font-size"] = "18px";
+                    lblQues15.Style["font-size"] = "18px";
+                    lblQues16.Style["font-size"] = "18px";
+                    lblQues17.Style["font-size"] = "18px";
+                    lblQues18.Style["font-size"] = "18px";
+
+                    btnReturn.Style["font-size"] = "18px";
+                    btnCalculate.Style["font-size"] = "18px";
                 }
                 else
                 {

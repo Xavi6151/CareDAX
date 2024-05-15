@@ -136,6 +136,100 @@ namespace CareDAX.Frontend.HTML
                     //Texto de los botones
                     btnReturn.Text = StringsDepresion.but_return;
                     btnCalculate.Text = StringsDepresion.but_calculate;
+
+                    //CAMBIAR TAMAÑO DE LETRA
+                    description.Style["font-size"] = "18px";
+                    lblCol0.Style["font-size"] = "18px";
+
+                    lblquest1.Style["font-size"] = "18px";
+                    lblquest2.Style["font-size"] = "18px";
+                    lblquest3.Style["font-size"] = "18px";
+                    lblquest4.Style["font-size"] = "18px";
+                    lblquest5.Style["font-size"] = "18px";
+                    lblquest6.Style["font-size"] = "18px";
+                    lblquest7.Style["font-size"] = "18px";
+                    lblquest8.Style["font-size"] = "18px";
+                    lblquest9.Style["font-size"] = "18px";
+                    lblquest10.Style["font-size"] = "18px";
+                    lblquest11.Style["font-size"] = "18px";
+                    lblquest12.Style["font-size"] = "18px";
+                    lblquest13.Style["font-size"] = "18px";
+                    lblquest14.Style["font-size"] = "18px";
+                    lblquest15.Style["font-size"] = "18px";
+                    lblquest16.Style["font-size"] = "18px";
+                    lblquest17.Style["font-size"] = "18px";
+
+                    rdb1.Style["font-size"] = "18px";
+                    rdb2.Style["font-size"] = "18px";
+                    rdb3.Style["font-size"] = "18px";
+                    rdb4.Style["font-size"] = "18px";
+                    rdb5.Style["font-size"] = "18px";
+                    rdb6.Style["font-size"] = "18px";
+                    rdb7.Style["font-size"] = "18px";
+                    rdb8.Style["font-size"] = "18px";
+                    rdb9.Style["font-size"] = "18px";
+                    rdb10.Style["font-size"] = "18px";
+                    rdb11.Style["font-size"] = "18px";
+                    rdb12.Style["font-size"] = "18px";
+                    rdb13.Style["font-size"] = "18px";
+                    rdb14.Style["font-size"] = "18px";
+                    rdb15.Style["font-size"] = "18px";
+                    rdb16.Style["font-size"] = "18px";
+                    rdb17.Style["font-size"] = "18px";
+                    rdb18.Style["font-size"] = "18px";
+                    rdb21.Style["font-size"] = "18px";
+                    rdb22.Style["font-size"] = "18px";
+                    rdb23.Style["font-size"] = "18px";
+                    rdb26.Style["font-size"] = "18px";
+                    rdb27.Style["font-size"] = "18px";
+                    rdb28.Style["font-size"] = "18px";
+                    rdb31.Style["font-size"] = "18px";
+                    rdb32.Style["font-size"] = "18px";
+                    rdb33.Style["font-size"] = "18px";
+                    rdb34.Style["font-size"] = "18px";
+                    rdb35.Style["font-size"] = "18px";
+                    rdb36.Style["font-size"] = "18px";
+                    rdb37.Style["font-size"] = "18px";
+                    rdb38.Style["font-size"] = "18px";
+                    rdb39.Style["font-size"] = "18px";
+                    rdb40.Style["font-size"] = "18px";
+                    rdb41.Style["font-size"] = "18px";
+                    rdb42.Style["font-size"] = "18px";
+                    rdb43.Style["font-size"] = "18px";
+                    rdb44.Style["font-size"] = "18px";
+                    rdb45.Style["font-size"] = "18px";
+                    rdb46.Style["font-size"] = "18px";
+                    rdb47.Style["font-size"] = "18px";
+                    rdb48.Style["font-size"] = "18px";
+                    rdb49.Style["font-size"] = "18px";
+                    rdb50.Style["font-size"] = "18px";
+                    rdb51.Style["font-size"] = "18px";
+                    rdb52.Style["font-size"] = "18px";
+                    rdb53.Style["font-size"] = "18px";
+                    rdb54.Style["font-size"] = "18px";
+                    rdb55.Style["font-size"] = "18px";
+                    rdb56.Style["font-size"] = "18px";
+                    rdb57.Style["font-size"] = "18px";
+                    rdb58.Style["font-size"] = "18px";
+                    rdb61.Style["font-size"] = "18px";
+                    rdb62.Style["font-size"] = "18px";
+                    rdb63.Style["font-size"] = "18px";
+                    rdb66.Style["font-size"] = "18px";
+                    rdb67.Style["font-size"] = "18px";
+                    rdb68.Style["font-size"] = "18px";
+                    rdb71.Style["font-size"] = "18px";
+                    rdb72.Style["font-size"] = "18px";
+                    rdb73.Style["font-size"] = "18px";
+                    rdb74.Style["font-size"] = "18px";
+                    rdb76.Style["font-size"] = "18px";
+                    rdb77.Style["font-size"] = "18px";
+                    rdb78.Style["font-size"] = "18px";
+                    rdb81.Style["font-size"] = "18px";
+                    rdb82.Style["font-size"] = "18px";
+                    rdb83.Style["font-size"] = "18px";
+
+                    btnReturn.Style["font-size"] = "18px";
+                    btnCalculate.Style["font-size"] = "18px";
                 }
                 else
                 {
