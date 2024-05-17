@@ -28,7 +28,7 @@
                     </path>
                 </svg>
             </button>--%>
-            <button class="button" onclick="">
+            <a class="button" href="#seccionAyuda">
                 <svg
                     class="icon"
                     stroke="currentColor"
@@ -44,7 +44,8 @@
                     <line x1="12" y1="16" x2="12" y2="12"></line>
                     <line x1="12" y1="8" x2="12" y2="8"></line>
                 </svg>
-            </button>   
+            </a>
+            <a class="title button" href="#seccionAyuda" style="margin-left:-11rem; font-size: 1rem;">Ayuda</a>
         </div>
           <!--CARDS: agregar onclick en cada uno para que abra los tests &  PRESENTACIÓN DAXIA Y CHAT-->
         <div class="contenedorFinal">
@@ -62,8 +63,8 @@
                     <div class="content">
                                 <span class="">Con DAXIA podrás contar tus problemas sin sentirte juzgado o apenado, DAXIA determinará un nivel del padecimiento que puedes tener (estrés, ansiedad o depresión), 
                                     al igual que recomendaciones que pueden ayudarte a disminuirlo.<br />
-                                    <b>Nuestro objetivo sólo es dar una orientación. NO un diagnóstico.</b><br />
-                                    Consulta el apartado de "Ayuda" para resolver dudas sobre DAXIA.
+                                    <b>Nuestro objetivo sólo es dar una orientación, NO un diagnóstico.</b><br />
+                                    Consulta la sección de "Ayuda" para resolver dudas sobre DAXIA.
                         </span>
                     </div>
                 </div>
@@ -225,7 +226,7 @@
       
     </form> 
         <!--HELP-->
-    <div class="ayuda">
+    <div class="ayuda" id="seccionAyuda">
         <h1 style="text-align: center;">Ayuda</h1>
         <div>
             <h2>¿Cómo funciona el chatbot?</h2>
@@ -233,11 +234,12 @@
                  </div>
         <div>
             <h2>¿Se quedan guardadas las conversaciones?</h2>
-                     <p>Por confidencialidad no se guardan, lo que sí se guarda en la pantalla principal son las recomendaciones que te hace Daxia junto con la fecha correspondiente.</p>
+            <p>Por confidencialidad no se guardan, lo que sí se guarda son las recomendaciones que te hace Daxia junto con la fecha correspondiente 
+                para en una versión futura mostrar estas recomendaciones en la página principal.</p>
                  </div>
         <div>
             <h2>¿Hasta dónde me ayudará Daxia?</h2>
-                     <p>Daxia no busca suplantar el trabajo de un psicológo promedio, pero dará consejos o diagnósticos lo más cercanos a la realidad. Su información está respaldada por estudios válidados por psicológos</p>
+            <p>Daxia no busca suplantar el trabajo de un psicológo profesional, pero dará consejos o diagnósticos lo más cercanos a la realidad. Su información está respaldada por estudios válidados por psicológos</p>
                  </div>
         <div>
             <h2>¿Qué hacer si noto que Daxia me ayuda pero considero tener un problema más grave?</h2>
