@@ -136,12 +136,12 @@ namespace CareDAX.Frontend.HTML
 
                             if (categoria.Equals("ansiedad"))
                             {
-                                cate = reader.GetString(3);
+                                cate = reader.GetString(4);
                                 CategoriaAnsiedad.Text = cate;
                              }
                             else if (categoria.Equals("estres"))
                             {
-                                cate = reader.GetString(4);
+                                cate = reader.GetString(3);
                                 CategoriaEstres.Text = cate;
 
                             }

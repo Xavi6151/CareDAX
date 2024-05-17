@@ -247,7 +247,7 @@
                  </div>
         <div>
             <h2>¿Quieres conocer más sobre este proyecto o hacer sugerencias de mejora sobre nuestro servicio?</h2>
-            <p>Envía correo a cualquiera de los siguientes correos:<b>caredax@gmail.com</b></p>
+            <p>Envía correo a cualquiera de los siguientes correos:<b>caredax7@gmail.com</b></p>
          </div>
      </div>
          
