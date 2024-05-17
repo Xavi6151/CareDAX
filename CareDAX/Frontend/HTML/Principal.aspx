@@ -7,8 +7,8 @@
     <title>Principal</title>
     <link rel="stylesheet" href="../CSS/Estilos_Principal.css" type="text/css" />
 </head>
-<body>
-    <form id="form1" runat="server" class="container">
+<body class="container">
+    <form id="form1" runat="server">
 
         <!--NAVBAR-->       
         <div class="button-container">
@@ -28,7 +28,7 @@
                     </path>
                 </svg>
             </button>--%>
-            <button class="button">
+            <button class="button" onclick="">
                 <svg
                     class="icon"
                     stroke="currentColor"
@@ -47,11 +47,10 @@
             </button>   
         </div>
           <!--CARDS: agregar onclick en cada uno para que abra los tests &  PRESENTACIÓN DAXIA Y CHAT-->
-        <div class="bottom-bottomDAXIA">
-            <asp:Button ID="ChatBot" runat="server" BorderStyle="Dotted" Text="ChatBot" class="buttonDAXIA transparente" OnClick="ChatBot_Click" />
-        </div>
+        <div class="contenedorFinal">
+            <div class="contenedorTest">
         <div class="card-container">
-            <div class="card-containerDAXIA2" style="transform: translate(-50%, 0%);">
+                    <div class="card-containerDAXIA2">
                 <div class="cardDAXIA2">
                     <div class="img-content">
                         <b style="color: turquoise; border-color: white;">DAXIA</b>
@@ -61,19 +60,23 @@
                         <%--<path fill-rule="nonzero" d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z"></path></svg>--%>
                     </div>
                     <div class="content">
-                        <span class="card__subtitle">Podrás contarle todo lo que por sentirte juzgado no puedes compartir a nadie más, podrá determinar un nivel del padecimiento que podrías tener (estrés, ansiedad o depresión) al igual que recomendaciones que podrán ayudarte a disminuirlo.
-                 <br /><b>No somos terapeutas y no reemplazaremos uno.</b>
-                            <br />
-                            Consulta el apartado de "Ayuda" para atender dudas sobre DAXIA.
+                                <span class="">Con DAXIA podrás contar tus problemas sin sentirte juzgado o apenado, DAXIA determinará un nivel del padecimiento que puedes tener (estrés, ansiedad o depresión), 
+                                    al igual que recomendaciones que pueden ayudarte a disminuirlo.<br />
+                                    <b>Nuestro objetivo sólo es dar una orientación. NO un diagnóstico.</b><br />
+                                    Consulta el apartado de "Ayuda" para resolver dudas sobre DAXIA.
                         </span>
-
                     </div>
-
                 </div>
             </div>
+                </div>
+                <div class="buttonTest">
+                    <asp:Button ID="Button3" runat="server" BorderStyle="Dotted" Text="ChatBot" class="button-content_Test transparente" OnClick="ChatBot_Click" />
+                </div>
+            </div>
+            <div class="contenedorTest" style="margin-top: 4rem">
+                <!--ESTRÉS-->
             <div class="card">
-                <div class="content" style="    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-">
+                    <div class="content" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
                     <div class="back">
                         <div class="back-content">
                             <!-- Reemplazar el contenido del svg con el ícono de una persona -->
@@ -110,6 +113,7 @@
                     </div>
                 </div>
             </div>
+                <!--ANSIEDAD-->
             <div class="card">
                 <div class="content">
                     <div class="back">
@@ -147,6 +151,7 @@
                     </div>
                 </div>
             </div>
+                <!--DEPRESIÓN-->
             <div class="card">
                 <div class="content">
                     <div class="back">
@@ -185,21 +190,22 @@
                 </div>
             </div>
         </div>
-
-
-        <!--TESTs -->
-        <div class="button_containerTest">
+            <div class="contenedorTest">
             <button class="buttonTest">
-                <asp:Button ID="TestEstres" runat="server" Text="Test Estrés" class="button-content_Test transparente" OnClick="TestEstres_Click"/>
+                    <asp:Button ID="Button1" runat="server" Text="Test Estrés" class="button-content_Test transparente" OnClick="TestEstres_Click" />
             </button>
             <button class="buttonTest">
-                <asp:Button ID="TestAnsiedad" runat="server" Text="Test Ansiedad" class="button-content_Test transparente"  OnClick="TestAnsiedad_Click"/>
+                    <asp:Button ID="Button2" runat="server" Text="Test Ansiedad" class="button-content_Test transparente" OnClick="TestAnsiedad_Click" />
             </button>
             <button class="buttonTest">
-                <asp:Button ID="TestDepresion" runat="server" Text="Test Depresión" class="button-content_Test transparente" OnClick="TestDepresion_Click" />
+                    <asp:Button ID="Button4" runat="server" Text="Test Depresión" class="button-content_Test transparente" OnClick="TestDepresion_Click" />
             </button>
         </div>
+        </div>
         
+
+
+
         <!--PERFIL-->
         <button id="btn-messagePerfil" class="button-messagePerfil">
             <div class="content-avatar">
@@ -219,43 +225,30 @@
       
     </form> 
         <!--HELP-->
-      <%--  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static"   >
-     <div class="modal-dialog">
-         <div class="modal-content custom-modal">
-             <!-- Agregar la clase personalizada custom-modal -->
-             <div class="modal-header">
-                 <h2 class="modal-title fs-5" id="exampleModalLabel">Ayuda</h2>
-                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-             </div>
-             <div class="modal-body">
-                 <!-- Estructura de notas de ayuda -->
-                 <div class="note">
-                     <h6>¿Cómo funciona el chatbot?</h6>
+    <div class="ayuda">
+        <h1 style="text-align: center;">Ayuda</h1>
+        <div>
+            <h2>¿Cómo funciona el chatbot?</h2>
                      <p>Daxia comenzará una conversación contigo dónde podrás expresar como te sientes el dia de hoy</p>
                  </div>
-                 <div class="note">
-                     <h6>¿Se quedan guardadas las conversaciones?</h6>
+        <div>
+            <h2>¿Se quedan guardadas las conversaciones?</h2>
                      <p>Por confidencialidad no se guardan, lo que sí se guarda en la pantalla principal son las recomendaciones que te hace Daxia junto con la fecha correspondiente.</p>
                  </div>
-                 <div class="note">
-                     <h6>¿Hasta dónde me ayudará Daxia?</h6>
+        <div>
+            <h2>¿Hasta dónde me ayudará Daxia?</h2>
                      <p>Daxia no busca suplantar el trabajo de un psicológo promedio, pero dará consejos o diagnósticos lo más cercanos a la realidad. Su información está respaldada por estudios válidados por psicológos</p>
                  </div>
-                 <div class="note">
-                     <h6>¿Qué hacer si noto que Daxia me ayuda pero considero tener un problema más grave?</h6>
+        <div>
+            <h2>¿Qué hacer si noto que Daxia me ayuda pero considero tener un problema más grave?</h2>
                      <p>Se recomienda buscar ayuda profesional</p>
                  </div>
-                 <div class="note">
-                     <h6>¿Quieres conocer más sobre este proyecto o hacer sugerencias de mejora sobre nuestro servicio?</h6>
-                     <p>
-                         Envía correo a cualquiera de los siguientes correos:
-                 <b>caredax@gmail.com</b>
-                     </p>
-                 </div>
-             </div>
+        <div>
+            <h2>¿Quieres conocer más sobre este proyecto o hacer sugerencias de mejora sobre nuestro servicio?</h2>
+            <p>Envía correo a cualquiera de los siguientes correos:<b>caredax@gmail.com</b></p>
          </div>
      </div>
- </div>--%>
+         
 </body>
 <script>
 
